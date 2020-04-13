@@ -16,14 +16,14 @@ program
   .option('-p, --prefix <prefix>', 'The app prefix (default: db)', 'db')
   .option('-a, --app <app>', 'The app name (default: db-demo)', 'db-demo')
 
-  .action(async (cmd) => {
+  .action(async () => {
       if (program.update) {
         // user entered:  apge --update
         await update.update();
 
       } else {
         await apge.generate({
-          app: program.appname,
+          app: program.app,
           prefix: program.prefix
         });
       }
