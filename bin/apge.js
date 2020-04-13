@@ -10,10 +10,10 @@ const program = new Command();
 
 program
   .name('apge')
-  .usage('[options] generate')
+  .usage('[options]')
   .version(pkg.version, '-v, --version', 'output the current version')
 
-  .arguments('<cmd>')
+  // .arguments('<cmd>')
 
   .option('-u, --update', 'Update of npm, angular cli and apge')
   .option('-p, --prefix <prefix>', 'The app prefix (default: db)', 'db')
@@ -23,18 +23,15 @@ program
       if (program.update) {
         // user entered:  apge --update
         await update.update();
-      }
 
-      if (cmd === 'generate') {
+      } else {
         let prefix = program.prefix;
         let appname = program.appname;
         await apge.generate({
           appname: appname,
           prefix: prefix
         });
-
-      } else {
-        program.help();
+        // program.help();
       }
     }
   )
