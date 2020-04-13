@@ -1,7 +1,6 @@
 #!/usr/bin/env node
 
 const {Command} = require('commander');
-const chalk = require('chalk');
 const apge = require('../lib');
 const update = require('../lib/update.js');
 const pkg = require('../package.json');
@@ -13,11 +12,9 @@ program
   .usage('[options]')
   .version(pkg.version, '-v, --version', 'output the current version')
 
-  // .arguments('<cmd>')
-
   .option('-u, --update', 'Update of npm, angular cli and apge')
   .option('-p, --prefix <prefix>', 'The app prefix (default: db)', 'db')
-  .option('-a, --app <appname>', 'The app name (default: db-demo)', 'db-demo')
+  .option('-a, --app <app>', 'The app name (default: db-demo)', 'db-demo')
 
   .action(async (cmd) => {
       if (program.update) {
@@ -25,13 +22,10 @@ program
         await update.update();
 
       } else {
-        let prefix = program.prefix;
-        let appname = program.appname;
         await apge.generate({
-          appname: appname,
-          prefix: prefix
+          app: program.appname,
+          prefix: program.prefix
         });
-        // program.help();
       }
     }
   )
