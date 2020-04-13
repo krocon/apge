@@ -16,8 +16,8 @@ program
   .option('-a, --app <appname>', 'The app name (default: db-demo)', 'db-demo');
 
 program
-  .action(() => {
-      // console.info(JSON.stringify(program, null, 4)); // TODO weg
+  .action(() =>
+    {
       if (program.update) {
         // user entered:  apge --update
         update.update();
