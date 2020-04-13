@@ -1,11 +1,11 @@
 {
   "name": "apge",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Angular Project Generator",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "main": "index.js",
+  "main": "lib/index.js",
   "bin": {
     "saysomethingawesome": "./bin/apge.js"
   },
@@ -21,8 +21,10 @@
     "seed"
   ],
   "files": [
-    "index.js",
-    "hello.bat",
+    "bin/apge.js",
+    "lib/index.js",
+    "lib/version.js",
+    "lib/help.js",
     "!test"
   ],
   "readmeFilename": "README.md",

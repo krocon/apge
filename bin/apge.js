@@ -1,6 +1,10 @@
 #!/usr/bin/env node
 
-const myLibrary = require('../index.js');
+const apge = require('../lib');
+const version = require('../lib/version.js');
+const help = require('../lib/help.js');
 
 // Displays the text in the console
-myLibrary.say('apge says \'hello world!\'');
+version.version();
+help.help();
+apge.generate('apge generate', package.version);
