@@ -37,5 +37,9 @@
   "bugs": {
     "url": "https://github.com/krocon/apg/issues"
   },
-  "homepage": "https://github.com/krocon/apg#readme"
+  "homepage": "https://github.com/krocon/apg#readme",
+  "dependencies": {
+    "chalk": "^4.0.0",
+    "commander": "^5.0.0"
+  }
 }
