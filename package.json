@@ -16,7 +16,17 @@
     "project",
     "seed"
   ],
-  "author": "Marc Kronberg",
+  "files": [
+    "index.js",
+    "hello.bat",
+    "!test"
+  ],
+  "readmeFilename": "README.md",
+  "author": {
+    "name": "Marc Kronberg",
+    "email": "krocon@gmail.com",
+    "url": "https://gui.expert/"
+  },
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/krocon/apg/issues"
