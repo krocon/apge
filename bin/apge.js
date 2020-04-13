@@ -14,7 +14,7 @@ program
 
   .option('-u, --update', 'Update of npm, angular cli and apge')
   .option('-p, --prefix <prefix>', 'The app prefix (default: db)', 'db')
-  .option('-a, --app <app>', 'The app name (default: db-demo)', 'db-demo')
+  .option('-a, --app <app>', 'The app name (default: demo)', 'demo')
 
   .action(async () => {
       if (program.update) {

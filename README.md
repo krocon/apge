@@ -1,6 +1,14 @@
 # apge
-Angular Project GEnerator 
+##Angular Project GEnerator 
 
-coming soon
+### coming soon  (not ready for use)
 
-npm i -g apge
+Install apge
+npm i -g apge@latest
+
+Updateing npm, angular cli
+apge -u 
+
+Generating a hole demo app:
+apge -p xy -a xy-demo
+
