@@ -16,22 +16,22 @@ program
   .option('-a, --app <appname>', 'The app name (default: db-demo)', 'db-demo');
 
 program
-  .action(() =>
+  .action(async () =>
     {
       if (program.update) {
         // user entered:  apge --update
-        update.update();
+        await update.update();
 
       } else {
 
         let prefix = program.prefix;
         let appname = program.appname;
-        apge.generate({
+        await apge.generate({
           appname: appname,
           prefix: prefix
         });
       }
-      process.exit(1);
+      // process.exit(1);
     }
   );
 
