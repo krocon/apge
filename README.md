@@ -10,5 +10,5 @@ Updateing npm, angular cli
 apge -u 
 
 Generating a hole demo app:
-apge -ap app -cp xy -a demo
+apge -p app -cp xy -a demo
 
