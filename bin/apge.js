@@ -10,39 +10,35 @@ const help = require('../lib/help.js');
 
 program
   // .arguments('<file>')
-  .option('-v, --version', 'Prints the version number of apge', true)
-  .option('-h, --help', 'Prints the version number of apge', true)
-  .option('-u, --update', 'Update of npm, angular cli and apge', true)
+  .option('-v, --version', 'Prints the version number of apge')
+  .option('-h, --help', 'Prints the version number of apge')
+  .option('-u, --update', 'Update of npm, angular cli and apge')
   .option('-p, --prefix <prefix>', 'The app prefix (default: db)', 'db')
-  .option('-a, --app <appname>', 'The app name (default: db-demo)')
+  .option('-a, --app <appname>', 'The app name (default: db-demo)', 'db-demo')
   .action(() => {
-      if (!program.update) {
+      // console.info(JSON.stringify(program, null, 4)); // TODO weg
+      if (program.update) {
         // user entered:  apge --update
         update();
-        process.exit(1);
-        return;
-      }
 
-      if (!program.version) {
+      } else if (program.version) {
         // user entered:  apge --version
         version();
-        process.exit(1);
-        return;
-      }
 
-      if (!program.help) {
+      } else if (program.help) {
         // user entered:  apge --help
         help.help();
-        process.exit(1);
-        return;
-      }
 
-      let prefix = program.prefix;
-      let appname = program.appname;
-      apge.generate({
-        appname: appname,
-        prefix: prefix
-      })
+      } else {
+
+        let prefix = program.prefix;
+        let appname = program.appname;
+        apge.generate({
+          appname: appname,
+          prefix: prefix
+        });
+      }
+      process.exit(1);
     }
   )
   .parse(process.argv);
