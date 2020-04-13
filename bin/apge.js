@@ -8,32 +8,34 @@ const pkg = require('../package.json');
 
 const program = new Command();
 
-program.version(pkg.version, '-v, --version', 'output the current version')
-
 program
+  .name('apge')
+  .usage('[options] generate')
+  .version(pkg.version, '-v, --version', 'output the current version')
+
+  .arguments('<cmd>')
+
   .option('-u, --update', 'Update of npm, angular cli and apge')
   .option('-p, --prefix <prefix>', 'The app prefix (default: db)', 'db')
-  .option('-a, --app <appname>', 'The app name (default: db-demo)', 'db-demo');
+  .option('-a, --app <appname>', 'The app name (default: db-demo)', 'db-demo')
 
-program
-  .action(async () =>
-    {
+  .action(async (cmd) => {
       if (program.update) {
         // user entered:  apge --update
         await update.update();
+      }
 
-      } else {
-
+      if (cmd === 'generate') {
         let prefix = program.prefix;
         let appname = program.appname;
         await apge.generate({
           appname: appname,
           prefix: prefix
         });
-      }
-      // process.exit(1);
-    }
-  );
 
-program
+      } else {
+        program.help();
+      }
+    }
+  )
   .parse(process.argv);

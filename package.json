@@ -1,6 +1,6 @@
 {
   "name": "apge",
-  "version": "0.0.19",
+  "version": "0.0.20",
   "description": "Angular Project Generator",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -39,6 +39,7 @@
   "homepage": "https://github.com/krocon/apg#readme",
   "dependencies": {
     "chalk": "^4.0.0",
-    "commander": "^5.0.0"
+    "commander": "^5.0.0",
+    "progress": "^2.0.3"
   }
 }
