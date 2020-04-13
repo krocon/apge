@@ -25,7 +25,7 @@ program
 
       if (!program.version) {
         // user entered:  apge --version
-        version.version();
+        version();
         process.exit(1);
         return;
       }
