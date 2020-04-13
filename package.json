@@ -1,6 +1,6 @@
 {
   "name": "apge",
-  "version": "0.0.12",
+  "version": "0.0.13",
   "description": "Angular Project Generator",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -22,7 +22,6 @@
   ],
   "files": [
     "bin/apge.js",
-    "lib/help.js",
     "lib/index.js",
     "lib/update.js",
     "!test"
