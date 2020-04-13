@@ -6,5 +6,5 @@ const help = require('../lib/help.js');
 
 // Displays the text in the console
 version.version();
-help.help();
-apge.generate('apge generate', package.version);
+// help.help();
+// apge.generate('apge generate');

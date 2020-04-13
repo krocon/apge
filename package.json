@@ -1,13 +1,13 @@
 {
   "name": "apge",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Angular Project Generator",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "main": "lib/index.js",
   "bin": {
-    "saysomethingawesome": "./bin/apge.js"
+    "apge": "./bin/apge.js"
   },
   "preferGlobal": true,
   "repository": {
