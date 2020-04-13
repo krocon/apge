@@ -1,11 +1,15 @@
 {
   "name": "apge",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Angular Project Generator",
-  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "main": "index.js",
+  "bin": {
+    "saysomethingawesome": "./bin/demo-global.js"
+  },
+  "preferGlobal": true,
   "repository": {
     "type": "git",
     "url": "git+https://github.com/krocon/apge.git"
