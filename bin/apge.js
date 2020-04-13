@@ -3,30 +3,46 @@
 const program = require('commander');
 const chalk = require('chalk');
 const apge = require('../lib');
+const update = require('../lib/update.js');
 const version = require('../lib/version.js');
 const help = require('../lib/help.js');
 
-// Displays the text in the console
-// help.help();
-// apge.generate('apge generate');
 
 program
   // .arguments('<file>')
-  .option('-v, --version', 'Prints the version number of apge', 'db')
-  .option('-p, --prefix <prefix>', 'The app prefix (default: db)', 'db-demo')
+  .option('-v, --version', 'Prints the version number of apge', true)
+  .option('-h, --help', 'Prints the version number of apge', true)
+  .option('-u, --update', 'Update of npm, angular cli and apge', true)
+  .option('-p, --prefix <prefix>', 'The app prefix (default: db)', 'db')
   .option('-a, --app <appname>', 'The app name (default: db-demo)')
   .action(() => {
-    // console.log('user: %s pass: %s file: %s', program.username, program.password, file);
-    if (program.version) {
-      version.version();
-    } else {
-      console.info(chalk.bold.cyan('TODO') + ' hier gehts weiter.');
+      if (!program.update) {
+        // user entered:  apge --update
+        update();
+        process.exit(1);
+        return;
+      }
+
+      if (!program.version) {
+        // user entered:  apge --version
+        version.version();
+        process.exit(1);
+        return;
+      }
+
+      if (!program.help) {
+        // user entered:  apge --help
+        help.help();
+        process.exit(1);
+        return;
+      }
 
       let prefix = program.prefix;
-      let appname = program.appname
-      console.info('Generating ' + chalk.yellow(appname) + ' ...');
-      console.info(chalk.bold.cyan('TODO') + ' Not implemented yet.');
+      let appname = program.appname;
+      apge.generate({
+        appname: appname,
+        prefix: prefix
+      })
     }
-    process.exit(1);
-  })
+  )
   .parse(process.argv);
