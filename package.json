@@ -1,6 +1,6 @@
 {
   "name": "apge",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Angular Project Generator",
   "main": "index.js",
   "scripts": {
