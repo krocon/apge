@@ -1,0 +1,202 @@
+<div class="__cp__-padding"
+     fxLayout="row wrap"
+     fxLayoutAlign="start stretch"
+     fxLayoutGap="1rem grid">
+
+  <div fxFlex="calc(50% - 1rem)" fxFlex.lg="calc(33.33% - 1rem)" fxFlex.lt-md="calc(100% - 1rem)">
+
+    <h2 class="example-h2">Progress spinner configuration</h2>
+
+    <section class="example-section">
+      <label class="example-margin">Color:</label>
+      <mat-radio-group [(ngModel)]="color">
+        <mat-radio-button class="example-margin" value="primary">
+          Primary
+        </mat-radio-button>
+        <mat-radio-button class="example-margin" value="accent">
+          Accent
+        </mat-radio-button>
+        <mat-radio-button class="example-margin" value="warn">
+          Warn
+        </mat-radio-button>
+      </mat-radio-group>
+    </section>
+
+    <section class="example-section">
+      <label class="example-margin">Mode:</label>
+      <mat-radio-group [(ngModel)]="mode">
+        <mat-radio-button class="example-margin" value="determinate">
+          Determinate
+        </mat-radio-button>
+        <mat-radio-button class="example-margin" value="indeterminate">
+          Indeterminate
+        </mat-radio-button>
+      </mat-radio-group>
+    </section>
+
+    <section *ngIf="mode === 'determinate'" class="example-section">
+      <label class="example-margin">Progress:</label>
+      <mat-slider [(ngModel)]="value" class="example-margin"></mat-slider>
+    </section>
+
+    <br>
+
+    <h2 class="example-h2">Result</h2>
+    <mat-progress-spinner
+      [color]="color"
+      [mode]="mode"
+      [value]="value"
+      class="example-margin">
+    </mat-progress-spinner>
+    <mat-progress-spinner
+      [color]="color"
+      [diameter]="24"
+      [mode]="mode"
+      [value]="value"
+      class="example-margin">
+    </mat-progress-spinner>
+    <mat-progress-spinner
+      [color]="color"
+      [diameter]="200"
+      [mode]="mode"
+      [value]="value"
+      class="example-margin">
+    </mat-progress-spinner>
+  </div>
+
+  <div fxFlex="calc(50% - 1rem)" fxFlex.lg="calc(33.33% - 1rem)" fxFlex.lt-md="calc(100% - 1rem)">
+    <p>
+      <mat-form-field appearance="legacy">
+        <mat-label>Legacy form field</mat-label>
+        <input matInput placeholder="Placeholder">
+        <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+        <mat-hint>Hint</mat-hint>
+      </mat-form-field>
+    </p>
+    <p>
+      <mat-form-field appearance="standard">
+        <mat-label>Standard form field</mat-label>
+        <input matInput placeholder="Placeholder">
+        <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+        <mat-hint>Hint</mat-hint>
+      </mat-form-field>
+    </p>
+    <p>
+      <mat-form-field appearance="fill">
+        <mat-label>Fill form field</mat-label>
+        <input matInput placeholder="Placeholder">
+        <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+        <mat-hint>Hint</mat-hint>
+      </mat-form-field>
+    </p>
+    <p>
+      <mat-form-field appearance="outline">
+        <mat-label>Outline form field</mat-label>
+        <input matInput placeholder="Placeholder">
+        <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+        <mat-hint>Hint</mat-hint>
+      </mat-form-field>
+    </p>
+  </div>
+  <div fxFlex="calc(50% - 1rem)" fxFlex.lg="calc(33.33% - 1rem)" fxFlex.lt-md="calc(100% - 1rem)">
+    <p>
+      <mat-form-field appearance="legacy">
+        <mat-label>Legacy form field</mat-label>
+        <input matInput placeholder="Placeholder">
+        <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+        <mat-hint>Hint</mat-hint>
+      </mat-form-field>
+    </p>
+    <p>
+      <mat-form-field appearance="standard">
+        <mat-label>Standard form field</mat-label>
+        <input matInput placeholder="Placeholder">
+        <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+        <mat-hint>Hint</mat-hint>
+      </mat-form-field>
+    </p>
+    <p>
+      <mat-form-field appearance="fill">
+        <mat-label>Fill form field</mat-label>
+        <input matInput placeholder="Placeholder">
+        <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+        <mat-hint>Hint</mat-hint>
+      </mat-form-field>
+    </p>
+    <p>
+      <mat-form-field appearance="outline">
+        <mat-label>Outline form field</mat-label>
+        <input matInput placeholder="Placeholder">
+        <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+        <mat-hint>Hint</mat-hint>
+      </mat-form-field>
+    </p>
+  </div>
+
+  <div fxFlex="calc(50% - 1rem)" fxFlex.lg="calc(33.33% - 1rem)" fxFlex.lt-md="calc(100% - 1rem)">
+    <mat-card>
+      <mat-card-content>
+        <h2 class="example-h2">Progress bar configuration</h2>
+
+        <section class="example-section">
+          <label class="example-margin">Color:</label>
+          <mat-radio-group [(ngModel)]="color">
+            <mat-radio-button class="example-margin" value="primary">
+              Primary
+            </mat-radio-button>
+            <mat-radio-button class="example-margin" value="accent">
+              Accent
+            </mat-radio-button>
+            <mat-radio-button class="example-margin" value="warn">
+              Warn
+            </mat-radio-button>
+          </mat-radio-group>
+        </section>
+
+        <section class="example-section">
+          <label class="example-margin">Mode:</label>
+          <mat-radio-group [(ngModel)]="barmode">
+            <mat-radio-button class="example-margin" value="determinate">
+              Determinate
+            </mat-radio-button>
+            <mat-radio-button class="example-margin" value="indeterminate">
+              Indeterminate
+            </mat-radio-button>
+            <mat-radio-button class="example-margin" value="buffer">
+              Buffer
+            </mat-radio-button>
+            <mat-radio-button class="example-margin" value="query">
+              Query
+            </mat-radio-button>
+          </mat-radio-group>
+        </section>
+
+        <section *ngIf="barmode === 'determinate' || barmode === 'buffer'" class="example-section">
+          <label class="example-margin">Progress:</label>
+          <mat-slider [(ngModel)]="value" class="example-margin"></mat-slider>
+        </section>
+        <section *ngIf="barmode === 'buffer'" class="example-section">
+          <label class="example-margin">Buffer:</label>
+          <mat-slider [(ngModel)]="bufferValue" class="example-margin"></mat-slider>
+        </section>
+      </mat-card-content>
+    </mat-card>
+
+    <mat-card>
+      <mat-card-content>
+        <h2 class="example-h2">Result</h2>
+
+        <section class="example-section">
+          <mat-progress-bar
+            [bufferValue]="bufferValue"
+            [color]="color"
+            [mode]="barmode"
+            [value]="value"
+            class="example-margin">
+          </mat-progress-bar>
+        </section>
+      </mat-card-content>
+    </mat-card>
+  </div>
+
+</div>
