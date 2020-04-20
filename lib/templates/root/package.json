@@ -7,16 +7,9 @@
     "build": "npm run _update-build-version & ng build --deleteOutputPath=true --prod --build-optimizer --serviceWorker=true --aot=true  --base-href /__app__/",
     "test": "ng test",
     "lint": "ng lint",
+    "lint-fix": "ng lint --fix=true",
     "e2e": "ng e2e",
-
-    "_update-build-version": "node replace.build.version.js",
-    "check": "gts check",
-    "clean": "gts clean",
-    "compile": "tsc",
-    "fix": "gts fix",
-    "prepare": "npm.cmd run compile",
-    "pretest": "npm.cmd run compile",
-    "posttest": "npm.cmd run check"
+    "_update-build-version": "node replace.build.version.js"
   },
   "private": true,
   "dependencies": {
