@@ -27,6 +27,7 @@ export class __capitalizedCp__VersionIndicatorComponent {
   public environment = environment;
 
   constructor() {
+    // tslint:disable:no-console
     console.info('Version >');
     console.info('        > Build Version:', environment.version);
     console.info('        > env          :', environment.env);

@@ -6,9 +6,9 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { HttpClientModule } from '@angular/common/http';
 import { MatGridListModule } from '@angular/material/grid-list';
 
-import { __capitalizedCp__DatenschutzPage } from "./__cp__-datenschutz/__cp__-datenschutz.page";
-import { __capitalizedCp__ImprintPage } from "./__cp__-imprint/__cp__-imprint.page";
-import { __capitalizedCp__NutzungsbedingungenPage } from "./__cp__-nutzungsbedingungen/__cp__-nutzungsbedingungen.page";
+import { __capitalizedCp__DatenschutzComponent } from "./__cp__-datenschutz/__cp__-datenschutz.component";
+import { __capitalizedCp__ImprintComponent } from "./__cp__-imprint/__cp__-imprint.component";
+import { __capitalizedCp__NutzungsbedingungenComponent } from "./__cp__-nutzungsbedingungen/__cp__-nutzungsbedingungen.component";
 
 @NgModule({
   imports: [
@@ -18,22 +18,22 @@ import { __capitalizedCp__NutzungsbedingungenPage } from "./__cp__-nutzungsbedin
     RouterModule.forChild([
       {
         path: '',
-        component: __capitalizedCp__DatenschutzPage,
+        component: __capitalizedCp__DatenschutzComponent,
         data: {depth: 1}
       },
       {
         path: 'datenschutz',
-        component: __capitalizedCp__DatenschutzPage,
+        component: __capitalizedCp__DatenschutzComponent,
         data: {depth: 1}
       },
       {
         path: 'impressum',
-        component: __capitalizedCp__ImprintPage,
+        component: __capitalizedCp__ImprintComponent,
         data: {depth: 1}
       },
       {
         path: 'nutzungsbedingungen',
-        component: __capitalizedCp__NutzungsbedingungenPage,
+        component: __capitalizedCp__NutzungsbedingungenComponent,
         data: {depth: 1}
       }
     ]),
@@ -41,9 +41,9 @@ import { __capitalizedCp__NutzungsbedingungenPage } from "./__cp__-nutzungsbedin
     FlexLayoutModule
   ],
   declarations: [
-    __capitalizedCp__DatenschutzPage,
-    __capitalizedCp__ImprintPage,
-    __capitalizedCp__NutzungsbedingungenPage
+    __capitalizedCp__DatenschutzComponent,
+    __capitalizedCp__ImprintComponent,
+    __capitalizedCp__NutzungsbedingungenComponent
   ],
   providers: []
 })

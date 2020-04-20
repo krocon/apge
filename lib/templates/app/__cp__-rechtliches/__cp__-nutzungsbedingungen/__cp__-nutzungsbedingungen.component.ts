@@ -2,11 +2,11 @@ import { ChangeDetectionStrategy, Component, OnDestroy, OnInit } from '@angular/
 
 @Component({
   selector: 'app-__cp__-nutzungsbedingungen',
-  templateUrl: '__cp__-nutzungsbedingungen.page.html',
-  styleUrls: ['__cp__-nutzungsbedingungen.page.scss'],
+  templateUrl: '__cp__-nutzungsbedingungen.component.html',
+  styleUrls: ['__cp__-nutzungsbedingungen.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class __capitalizedCp__NutzungsbedingungenPage implements OnInit, OnDestroy {
+export class __capitalizedCp__NutzungsbedingungenComponent implements OnInit, OnDestroy {
 
   constructor() {
   }

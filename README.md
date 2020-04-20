@@ -1,14 +1,16 @@
-# APGE
-##**A**ngular **P**roject **GE**nerator 
+# APGe - **A**ngular **P**roject **GE**nerator 
 
-### coming soon  (not ready for use)
+## coming soon  (not ready for use)
 
-####Install apge
+### Install apge
 npm i -g apge@latest
 
-####Updateing npm, angular cli
+### Show help
+apge --help 
+
+### Updating npm, angular cli
 apge -u 
 
-####Generating a hole demo app:
+### Generating a hole demo app:
 apge -a demo -p app -cp xy 
 
