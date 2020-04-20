@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 const {Command} = require('commander');
-const apge = require('../lib');
+const apge = require('../lib/generate-new');
 const update = require('../lib/update.js');
 const pkg = require('../package.json');
 
