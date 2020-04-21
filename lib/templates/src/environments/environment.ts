@@ -9,6 +9,7 @@ export const environment = {
   production: false,
   env: 'dev',
   version: pkg.version,
+  commitHash: '{COMMIT_HASH}',
   showVersionIndicator: true,
   routerTracing: false,
 
@@ -21,10 +22,6 @@ export const environment = {
     loginUrl: 'assets/mock-data/auth/login.json',
     logoutUrl: 'assets/mock-data/auth/logout.json',
     logoutMock: true,
-  },
-
-  contentServiceConifg: {
-    contentConfigUrl: 'assets/mock-data/footer/data.json'
   }
 };
 

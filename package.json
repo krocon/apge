@@ -1,6 +1,6 @@
 {
   "name": "apge",
-  "version": "0.0.41",
+  "version": "0.0.42",
   "description": "Angular Project Generator",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
