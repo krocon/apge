@@ -24,7 +24,7 @@ program
         await update.update();
 
       } else {
-        await apge.generate({
+        await apge.generateNewProject({
           force: program.force,
           app: program.app,
           prefix: program.prefix,
