@@ -9,8 +9,8 @@ npm i -g apge@latest
 apge --help 
 
 ### Updating npm, angular cli
-apge -u 
+apge update 
 
 ### Generating a hole demo app:
-apge -a demo -p app -cp xy 
+apge new -a demo -p app -cp xy 
 
