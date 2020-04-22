@@ -1,10 +1,13 @@
 {
   "name": "apge",
-  "version": "0.0.49",
+  "version": "0.0.50",
   "description": "Angular Project Generator",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "install-g-local": "npm uninstall -g apge & npm install -g D:\\data\\entwicklung\\angular\\apge"
+    "install-g-local": "npm uninstall -g apge & npm install -g ./",
+    "git-push": "git commit -am ':-)' & git push",
+    "npm-publish": "npm version minor & npm publish",
+    "publish": "npm run git-push & npm run npm-publish"
   },
   "main": "lib/cmd-generate-new.js",
   "bin": {
