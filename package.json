@@ -8,7 +8,7 @@
     "npm-patch": "npm version patch",
     "git-push": "git commit -am ':-)' & git push",
     "npm-publish": "npm publish",
-    "publish-all": "npm run npm-patch & npm run git-push & npm run npm-publish"
+    "publish-all": "npm version patch & npm run git-push & npm publish"
   },
   "main": "lib/cmd-generate-new.js",
   "bin": {
