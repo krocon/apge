@@ -1,11 +1,10 @@
 {
   "name": "apge",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Angular Project Generator",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "install-g-local": "npm uninstall -g apge & npm install -g ./",
-
     "npm-patch": "npm version patch",
     "git-push": "git commit -am ':-)' & git push",
     "npm-publish": "npm publish",
