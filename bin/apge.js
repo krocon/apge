@@ -9,28 +9,40 @@ const program = new Command();
 
 program
   .name('apge')
-  .usage('[options]')
-  .version(pkg.version, '-v, --version', 'output the current version')
+  .usage('<cmd> [options]')
+  .version(pkg.version, '-v, --version', 'Output the current version');
 
-  .option('-u, --update', 'Update of npm, angular cli and apge')
-  .option('-f, --force <force>', 'No confirm dialog / no prompts.')
+
+program
+  .command('update')
+  .description('Update of npm, angular cli and apge')
+  .action(async () => {
+    await update.update();
+  });
+
+program
+  .command('new')
+  .description('Generate a new angular project')
+  .option('-f, --force <force>', 'No confirm dialog / no prompts.', false)
   .option('-a, --app <app>', 'The app name (default: demo)', 'demo')
   .option('-p, --prefix <prefix>', 'The app prefix (default: app)', 'app')
   .option('-cp, --componentprefix <componentprefix>', 'The component prefix (default: db)', 'db')
-
-  .action(async () => {
-      if (program.update) {
-        // user entered:  apge --update
-        await update.update();
-
-      } else {
-        await apge.generateNewProject({
-          force: program.force,
-          app: program.app,
-          prefix: program.prefix,
-          componentprefix: program.componentprefix,
-        });
-      }
+  .action(async (options) => {
+      const opts = {
+        force: options.force,
+        app: options.app,
+        prefix: options.prefix,
+        componentprefix: options.componentprefix,
+      };
+      await apge.generateNewProject(opts);
     }
   )
-  .parse(process.argv);
+  .on('--help', function () {
+    console.log('');
+    console.log('Examples:');
+    console.log('');
+    console.log('  $ apge new -a demo -p app -cp xy');
+    console.log('  $ apge new -a clicknride -p app -cp cr -f');
+  });
+
+program.parse(process.argv);
