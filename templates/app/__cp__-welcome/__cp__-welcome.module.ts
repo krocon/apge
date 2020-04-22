@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { MatButtonModule } from '@angular/material/button';
 import { RouterModule } from '@angular/router';
 import { __capitalizedCp__WelcomeComponent } from "./__cp__-welcome.component";
-import { ExtendedModule } from "@angular/flex-layout";
+import { ExtendedModule, FlexLayoutModule, FlexModule } from "@angular/flex-layout";
 
 @NgModule({
   declarations: [
@@ -19,6 +19,8 @@ import { ExtendedModule } from "@angular/flex-layout";
       }
     ]),
     ExtendedModule,
+    FlexModule,
+    FlexLayoutModule,
   ]
 })
 export class __capitalizedCp__WelcomeModule {

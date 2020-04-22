@@ -21,6 +21,8 @@
         Demo
       </a>
 
+      <!-- add new main menu items here -->
+
       <mat-divider></mat-divider>
 
       <a href="#" mat-list-item routerLink="/recht/impressum">
@@ -78,6 +80,9 @@
         </div>
         <div>
           <small>Version: {{version}}</small>
+        </div>
+        <div *ngIf="commitHash">
+          <small>Commit: {{commitHash}}</small>
         </div>
         <div>
           <small>&copy; 2020 Deutsche Xyz AG</small>

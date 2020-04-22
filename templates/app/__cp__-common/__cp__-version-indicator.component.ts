@@ -18,7 +18,11 @@ import { environment } from "../../environments/environment";
   `],
   template: `
     <div *ngIf="environment?.showVersionIndicator && environment.env!=='prod'">
-      <small>&nbsp;Version ({{environment.env}}): {{environment.version}}&nbsp;&nbsp;</small>
+      <small>
+        &nbsp;Version ({{environment.env}}):
+        {{environment.version}}&nbsp;
+        ({{environment.commitHash}})&nbsp;&nbsp;
+      </small>
     </div>
   `
 })
@@ -30,6 +34,7 @@ export class __capitalizedCp__VersionIndicatorComponent {
     // tslint:disable:no-console
     console.info('Version >');
     console.info('        > Build Version:', environment.version);
+    console.info('        > Commit Hash  :', environment.commitHash);
     console.info('        > env          :', environment.env);
     console.info('        > all          :', environment);
   }

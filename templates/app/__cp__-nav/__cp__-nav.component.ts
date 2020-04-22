@@ -34,6 +34,7 @@ export class __capitalizedCp__NavComponent {
 
   lastClickInMillis = Date.now();
   version = environment.version;
+  commitHash = environment.commitHash;
   loggedIn = false;
   data: LoginResponseData = null;
   title = 'Herzlich willkommen!';

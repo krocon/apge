@@ -1,14 +1,21 @@
-<div class="__cp__-welcome-outer-div" ngClass.lt-sm="display-none">
-  <div class="__cp__-welcome-div"></div>
+<div
+  class="__cp__-welcome-outer-div"
+  [ngClass]="{'display-none': (isSmall$ | async)}"
+  ngClass.lt-sm="display-none">
+  <div *ngIf="bgImageVisible" class="__cp__-welcome-div"></div>
 </div>
 
 <div class="__cp__-text-hidden __cp__-font-monospace">
   production: {{ environment.production }}<br>
   envName: '{{ environment.env }}'<br>
   version: '{{ environment.version }}'<br>
+  commit: '{{ environment.commitHash }}'<br>
 </div>
 
-<div class="__cp__-padding">
+<div
+  class="__cp__-padding"
+  [ngClass]="{'overlay-div': textAsOverlay && !(isSmall$ | async)}">
+
   <h1>__capitalizedApp__</h1>
 
   <br>
@@ -23,4 +30,31 @@
 </div>
 
 
+
+<div class="__cp__-padding"
+     [ngClass]="{'text-below-image-div': textAsOverlay && !(isSmall$ | async)}"
+     fxLayout="row wrap"
+     fxLayoutAlign="start stretch"
+     fxLayoutGap="1rem" fxLayoutGap.lt-md="0">
+
+  <div fxFlex.lt-sm="100%" fxFlex.lt-md="calc(50% - 1rem)" fxFlex="calc(25% - 1rem)">
+    <h3>Tip: {{(isSmall$ | async)}}</h3>
+    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+  </div>
+
+  <div fxFlex.lt-sm="100%" fxFlex.lt-md="calc(50% - 1rem)" fxFlex="calc(25% - 1rem)">
+    <h3>Top</h3>
+    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+  </div>
+
+  <div fxFlex.lt-sm="100%" fxFlex.lt-md="calc(50% - 1rem)" fxFlex="calc(25% - 1rem)">
+    <h3>Lorem</h3>
+    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+  </div>
+
+  <div fxFlex.lt-sm="100%" fxFlex.lt-md="calc(50% - 1rem)" fxFlex="calc(25% - 1rem)">
+    <h3>Ipsum</h3>
+    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+  </div>
+</div>
 

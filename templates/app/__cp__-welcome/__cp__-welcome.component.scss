@@ -25,8 +25,26 @@ p {
   margin-right: auto;
 }
 
+.overlay-div {
+  position: relative;
+  background: transparent;
+  color: #fff;
+  top: -430px;
+}
+
+.text-below-image-div {
+  width: 100%;
+  position: relative;
+  top: -350px;
+  > div {
+    text-align: left;
+  }
+}
+
 .__cp__-welcome-outer-div {
-  height: 400px;
+  height: 450px;
+  background-image: url('../../assets/img/bg-quantum-gradient-02.svg');
+  background-size: cover;
 }
 
 .__cp__-welcome-div {

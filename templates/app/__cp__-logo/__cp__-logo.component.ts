@@ -7,7 +7,6 @@ import { AfterViewInit, ChangeDetectorRef, Component, Input } from '@angular/cor
 export class __capitalizedCp__LogoComponent implements AfterViewInit {
 
   @Input() width = 94.606644 / 2;
-
   @Input() height = 66.223038 / 2;
 
   constructor(

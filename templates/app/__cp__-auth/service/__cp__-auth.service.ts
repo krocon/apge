@@ -41,6 +41,7 @@ export class __capitalizedCp__AuthService {
   }
 
   logout() {
+    // tslint:disable:no-console
     console.info('Logging out...');
     __capitalizedCp__AuthService.innerService.update(new LoginResponseData('', '', '','', ''));
     this.router.navigate(['/']);

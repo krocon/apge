@@ -9,12 +9,16 @@
  *    export const environment = {
  *      production: true,
  *      version: '{BUILD_VERSION}',
+ *      commitHash: '{COMMIT_HASH}',
  *
  * Then you can show the verion string in your menu, footer or about component:
  *    public version = environment.version;
- *    <small>Version: {{version}}</small>
+ *    public commitHash = environment.commitHash;
  *
- * Enhance your packgae.json scripts with
+ *    <small>Version: {{version}}</small>
+ *    <small>Commit: {{commitHash}}</small>
+ *
+ * Enhance your package.json scripts with
  *   "build": "npm run _update-build-version & ng build --prod",
  *   "_update-build-version": "node replace.build.version.js",
  *
@@ -22,6 +26,7 @@
  */
 
 const replace = require('replace-in-file');
+const git = require('git-last-commit');
 
 const dateOptions = {
   timeZone: "Europe/Berlin",
@@ -33,37 +38,68 @@ const dateOptions = {
   minute: '2-digit'
 };
 
-const buildVersion = new Date()
-  .toLocaleString("de-DE", dateOptions)
-  .replace(/,/g, '');
+const getCommitShorthash = async () => {
+  return await new Promise((resolve, reject) => {
+    git.getLastCommit((err, commit) => {
+      if (err) {
+        resolve('');
+      } else {
+        resolve(commit.shortHash);
+      }
+    });
+  });
+}
 
-const regs = [
-  /version: '{BUILD_VERSION}'/g,
-  /version: '[^']*'/g,
-];
 
-const replaceOptions = {
-  files: 'src/environments/environment.prod.ts',
-  to: 'version: \'' + buildVersion + '\'',
-  allowEmptyPaths: false,
-};
+async function main() {
+  const buildVersion = new Date().toLocaleString("de-DE", dateOptions).replace(/,/g, '');
+  const commitShorthash = await getCommitShorthash();
 
-function tryToReplace(idx) {
-  try {
-    const ret = replace.sync({...replaceOptions, from: regs[idx]});
-    if (ret.length && ret[idx].hasChanged) {
-      console.info('Build version set: ' + buildVersion);
-      return true;
+  const replacements = [
+    {
+      success: `> Build version set to ${buildVersion}`,
+      regs: [
+        /version: '{BUILD_VERSION}'/g,
+        /version: '[^']*'/g,
+      ],
+      to: `version: '${buildVersion}'`
+    },
+    {
+      success: `> Commit hash set to ${commitShorthash}`,
+      regs: [
+        /commitHash: '{COMMIT_HASH}'/g,
+        /commitHash: '[^']*'/g,
+      ],
+      to: `commitHash: '${commitShorthash}'`
     }
-  } catch (error) {
-    return false;
+  ]
+
+  const replaceOptions = {
+    files: 'src/environments/environment.prod.ts',
+    allowEmptyPaths: false,
+  };
+
+  for (let i = 0; i < replacements.length; i++) {
+    const replacement = replacements[i];
+    console.info('i', i);
+    for (let j = 0; j < replacement.regs.length; j++) {
+      console.info('j', j);
+      const reg = replacement.regs;
+      try {
+        const ret = replace.sync({
+          ...replaceOptions,
+          from: reg,
+          to: replacement.to
+        });
+        if (ret.length && ret[0].hasChanged) {
+          console.info(replacement.success);
+          break
+        }
+      } catch (error) {
+        // ignore
+      }
+    }
   }
 }
 
-let result = tryToReplace(0);
-if (!result) {
-  result = tryToReplace(1);
-}
-if (!result) {
-  console.warn('Could NOT set build version to ' + buildVersion);
-}
+main();
