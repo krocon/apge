@@ -1,11 +1,12 @@
 {
   "name": "apge",
-  "version": "0.0.42",
+  "version": "0.0.43",
   "description": "Angular Project Generator",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "install-g-local": "npm uninstall -g apge & npm install -g D:\\data\\entwicklung\\angular\\apge"
   },
-  "main": "lib/generate-new.js",
+  "main": "lib/cmd-generate-new.js",
   "bin": {
     "apge": "./bin/apge.js"
   },
@@ -22,8 +23,8 @@
   ],
   "files": [
     "bin/apge.js",
-    "lib/generate-new.js",
-    "lib/update.js",
+    "lib/cmd-generate-new.js",
+    "lib/cmd-update.js",
     "!test"
   ],
   "readmeFilename": "README.md",
