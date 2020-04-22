@@ -13,6 +13,7 @@ program
   .version(pkg.version, '-v, --version', 'output the current version')
 
   .option('-u, --update', 'Update of npm, angular cli and apge')
+  .option('-f, --force <force>', 'No confirm dialog / no prompts.')
   .option('-a, --app <app>', 'The app name (default: demo)', 'demo')
   .option('-p, --prefix <prefix>', 'The app prefix (default: app)', 'app')
   .option('-cp, --componentprefix <componentprefix>', 'The component prefix (default: db)', 'db')
@@ -24,6 +25,7 @@ program
 
       } else {
         await apge.generate({
+          force: program.force,
           app: program.app,
           prefix: program.prefix,
           componentprefix: program.componentprefix,
