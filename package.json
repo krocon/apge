@@ -1,9 +1,9 @@
 {
   "name": "apge",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "description": "Angular Project Generator",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "install-g-local": "npm uninstall -g apge & npm install -g ./",
     "npm-patch": "npm version patch",
     "git-push": "git commit -am ':-)' & git push",
@@ -48,5 +48,8 @@
     "progress": "^2.0.3",
     "prompts": "^2.3.2",
     "replace-in-file": "^5.0.2"
+  },
+  "devDependencies": {
+    "jest": "^25.4.0"
   }
 }
