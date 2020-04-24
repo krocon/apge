@@ -96,8 +96,8 @@ export class __capitalizedCp__LoginPageComponent implements OnInit, OnDestroy {
       this.formGroup.patchValue(loginData);
       this.focusOnPassword = !!loginData.username;
       this.focusOnUsername = !this.focusOnPassword;
-      this.initialized = true;
     }
+    this.initialized = true;
   }
 
   fetchAuthLogin() {

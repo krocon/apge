@@ -39,15 +39,17 @@ program
   .command('new')
   .description('Generate a new angular project')
   .option('-f, --force <force>', 'No confirm dialog / no prompts.', false)
-  .option('-a, --app <app>', 'The app name (default: demo)', 'demo')
-  .option('-p, --prefix <prefix>', 'The app prefix (default: app)', 'app')
-  .option('-cp, --componentprefix <componentprefix>', 'The component prefix (default: db)', 'db')
+  .option('-a, --app <app>', 'The app name', 'demo')
+  .option('-l, --logo <logo>', 'A predefined logo [dummy, deutschebank, deutschebahn, lufthansa]', 'dummy')
+  .option('-p, --prefix <prefix>', 'The app prefix', 'app')
+  .option('-cp, --componentprefix <componentprefix>', 'The component prefix', 'db')
   .action(async (options) => {
       const opts = {
         force: options.force,
         app: options.app,
         prefix: options.prefix,
         componentprefix: options.componentprefix,
+        logo: options.logo
       };
       await apge.generateNewProject(opts);
     }

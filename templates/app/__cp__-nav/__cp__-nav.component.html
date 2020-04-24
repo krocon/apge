@@ -105,6 +105,10 @@
       <span data-test-id="main-header-title-span">
         {{title}}
       </span>
+
+      <span class="__cp__-flex-fill-space"></span>
+
+      <app-__cp__-logo *ngIf="(isHandset$ | async)" class="__cp__-float-right"></app-__cp__-logo>
     </mat-toolbar>
 
     <div class="__cp__-content">

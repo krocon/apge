@@ -24,7 +24,7 @@
 
   <br>
 
-  <button color="primary" mat-flat-button routerLink="/ersatzkonzepte">
+  <button color="primary" mat-flat-button routerLink="/demo">
     Starten <i class="material-icons">arrow_forward_ios</i>
   </button>
 </div>
@@ -38,8 +38,9 @@
      fxLayoutGap="1rem" fxLayoutGap.lt-md="0">
 
   <div fxFlex.lt-sm="100%" fxFlex.lt-md="calc(50% - 1rem)" fxFlex="calc(25% - 1rem)">
-    <h3>Tip: {{(isSmall$ | async)}}</h3>
-    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+    <h3>Tip</h3>
+    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Small&Handset: {{(isSmall$ | async)}}</p>
+    <p><a href="https://www.svgbackgrounds.com/">svgbackgrounds.com</a></p>
   </div>
 
   <div fxFlex.lt-sm="100%" fxFlex.lt-md="calc(50% - 1rem)" fxFlex="calc(25% - 1rem)">

@@ -1,8 +1,8 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnDestroy } from '@angular/core';
 import { environment } from '../../environments/environment';
 import { Observable } from "rxjs";
 import { BreakpointObserver, Breakpoints } from "@angular/cdk/layout";
-import { map, shareReplay } from "rxjs/operators";
+import { map, shareReplay, takeWhile } from "rxjs/operators";
 
 @Component({
   selector: 'app-__cp__-welcome',
@@ -10,11 +10,13 @@ import { map, shareReplay } from "rxjs/operators";
   styleUrls: ['./__cp__-welcome.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class __capitalizedCp__WelcomeComponent {
+export class __capitalizedCp__WelcomeComponent implements OnDestroy {
 
   public environment = environment;
+
   bgImageVisible = false;
   textAsOverlay = true;
+  alive = true;
 
 
   constructor(
@@ -25,7 +27,12 @@ export class __capitalizedCp__WelcomeComponent {
   isSmall$: Observable<boolean> = this.breakpointObserver
     .observe([Breakpoints.Small, Breakpoints.Handset])
     .pipe(
+      takeWhile(() => this.alive),
       map(result => result.matches),
       shareReplay()
     );
+
+  ngOnDestroy(): void {
+    this.alive = false;
+  }
 }

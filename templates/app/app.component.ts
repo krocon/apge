@@ -16,6 +16,7 @@ export class AppComponent {
         routeTitles: {
           home: 'Herzlich willkommen!',
           login: 'Anmelden',
+          demo: 'Demos',
           abmelden: 'Abmelden',
           setup: 'Einstellungen',
           impressum: 'Impressum, Kontakt & Hilfe',

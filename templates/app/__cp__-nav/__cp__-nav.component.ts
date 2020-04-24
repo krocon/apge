@@ -1,4 +1,11 @@
-import { ChangeDetectionStrategy, ChangeDetectorRef, Component, HostListener, ViewChild } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  ChangeDetectorRef,
+  Component,
+  HostListener,
+  OnDestroy,
+  ViewChild
+} from '@angular/core';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Observable } from 'rxjs';
 import { map, shareReplay, takeWhile } from 'rxjs/operators';
@@ -14,7 +21,7 @@ import { LoginResponseData } from "../__cp__-auth/data/login.response.data";
   styleUrls: ['./__cp__-nav.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class __capitalizedCp__NavComponent {
+export class __capitalizedCp__NavComponent implements OnDestroy {
 
   private static readonly config = {
     routeTitles: {
@@ -39,14 +46,14 @@ export class __capitalizedCp__NavComponent {
   data: LoginResponseData = null;
   title = 'Herzlich willkommen!';
 
+  private alive = true;
+
   isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
     .pipe(
+      takeWhile(() => this.alive),
       map(result => result.matches),
       shareReplay()
     );
-
-  private alive = true;
-
 
   constructor(
     private breakpointObserver: BreakpointObserver,
@@ -72,6 +79,10 @@ export class __capitalizedCp__NavComponent {
     Object.assign(this.config, config);
   }
 
+  ngOnDestroy(): void {
+    this.alive = false;
+  }
+
   @HostListener('window:resize', ['$event'])
   @HostListener('window:click', ['$event'])
   onResize(_) {
@@ -87,8 +98,9 @@ export class __capitalizedCp__NavComponent {
           this.matSidenavContent.scrollTo({top: 0, left: 0});
           const routeTitles = __capitalizedCp__NavComponent.config.routeTitles;
           const keys = Object.keys(routeTitles);
+          let url = evt.url.replace(/\//g, '');
           for (const key of keys) {
-            if (evt.url.indexOf(key) > -1) {
+            if (url.indexOf(key) > -1) {
               this.title = routeTitles[key];
               return;
             }
@@ -107,7 +119,7 @@ export class __capitalizedCp__NavComponent {
   }
 
   onSessionTimeout() {
-    console.warn('onSessionTimeout()...');
+    console.warn('on session timeout...');
     this.authService.logout();
   }
 
