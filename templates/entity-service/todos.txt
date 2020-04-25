@@ -1,0 +1,38 @@
+---------------------------------------------------------
+AppComponent
+---------------------
+
+import { __capitalizedCp____capitalizeEntity__AjaxService } from "./__cp__-__entity__/service/__cp__-__entity__-ajax.service";
+
+constructor() {
+  __capitalizedCp____capitalizeEntity__AjaxService.forRoot(environment.__cp____capitalizeEntity__Config);
+
+
+---------------------------------------------------------
+environment.ts
+---------------------
+
+  __cp____capitalizeEntity__Config: {
+    getUrl: 'assets/mock-data/__entity__/get.json',
+    getAllUrl: 'assets/mock-data/__entity__/getall.json',
+    deleteUrl: 'assets/mock-data/__entity__/delete.json',
+    postUrl: 'assets/mock-data/__entity__/post.json',
+    putUrl: 'assets/mock-data/__entity__/put.json'
+  }
+
+---------------------------------------------------------
+environment.prod.ts
+---------------------
+
+const backendUrl = '../service';
+  __cp____capitalizeEntity__Config: {
+    getUrl: `${backendUrl}/__entity__`,
+    getAllUrl: `${backendUrl}/__entity__`,
+    deleteUrl: `${backendUrl}/__entity__`,
+    postUrl: `${backendUrl}/__entity__`,
+    putUrl: `${backendUrl}/__entity__`
+  },
+};
+
+! remove:    ,  ,
+---------------------------------------------------------

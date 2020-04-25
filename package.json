@@ -1,6 +1,6 @@
 {
   "name": "apge",
-  "version": "0.3.3",
+  "version": "0.3.4",
   "description": "Angular Project Generator",
   "scripts": {
     "test": "jest",
@@ -42,12 +42,14 @@
   },
   "homepage": "https://github.com/krocon/apg#readme",
   "dependencies": {
+    "cfonts": "^2.8.1",
     "chalk": "^4.0.0",
     "commander": "^5.0.0",
     "fs-extra": "^9.0.0",
     "progress": "^2.0.3",
     "prompts": "^2.3.2",
-    "replace-in-file": "^5.0.2"
+    "replace-in-file": "^5.0.2",
+    "window-size": "^1.1.1"
   },
   "devDependencies": {
     "jest": "^25.4.0"
