@@ -6,7 +6,7 @@ import { Observable } from "rxjs";
 @Injectable({
   providedIn: 'root',
 })
-export class __capitalizedCp____capitalizeEntity__StoreService {
+export class __capitalizedCp____capitalizedEntity__StoreService {
 
   private static readonly innerService =
     new __capitalizedCp__TypedDataService<__capitalizedCp____capitalizedEntity__Data>(
@@ -15,15 +15,15 @@ export class __capitalizedCp____capitalizeEntity__StoreService {
     );
 
   get valueChanges$(): Observable<__capitalizedCp____capitalizedEntity__Data> {
-    return __capitalizedCp____capitalizeEntity__StoreService.innerService.valueChanges$.asObservable();
+    return __capitalizedCp____capitalizedEntity__StoreService.innerService.valueChanges$.asObservable();
   }
 
   getValue(): __capitalizedCp____capitalizedEntity__Data {
-    return __capitalizedCp____capitalizeEntity__StoreService.innerService.getValue();
+    return __capitalizedCp____capitalizedEntity__StoreService.innerService.getValue();
   }
 
   update(o: __capitalizedCp____capitalizedEntity__Data): void {
-    __capitalizedCp____capitalizeEntity__StoreService.innerService.update(o);
+    __capitalizedCp____capitalizedEntity__StoreService.innerService.update(o);
   }
 
 }

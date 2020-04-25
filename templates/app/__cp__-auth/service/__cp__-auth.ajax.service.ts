@@ -1,4 +1,3 @@
-/* tslint:disable:max-line-length */
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { LoginRequestData } from '../data/login.request.data';
@@ -25,26 +24,11 @@ export class __capitalizedCp__AuthAjaxService {
     Object.assign(this.config, config);
   }
 
-  private static object2ParamString(obj) {
-    const str = [];
-    for (const p in obj) {
-      if (obj.hasOwnProperty(p)) {
-        const s1 = encodeURIComponent(p);
-        const s2 = encodeURIComponent(obj[p]);
-        str.push(`${s1}=${s2}`);
-      }
-    }
-    return str.join('&');
-  }
-
-
   login(loginData: LoginRequestData): Observable<LoginResponseData> {
     let url = __capitalizedCp__AuthAjaxService.config.loginUrl;
     if (url.indexOf('mock-data') > -1) {
       return this.http.get<LoginResponseData>(url);
     }
-    // const para = Object.assign({}, loginData);
-    // const headers = new HttpHeaders({'Content-Type': 'application/x-www-form-urlencoded'});
     return this.http.post<LoginResponseData>(url, loginData);
   }
 
