@@ -74,9 +74,7 @@ program
       }
 
       if (p1 && p2 && p2.length > 1) {
-        console.info('_force', JSON.stringify(p1.force));
-
-        const force = p1.force === 'true' || p1.force === '1';
+        jsonObject.force = p1.force;
         const schematic = p2[0];
         const name = p2[1];
 
@@ -85,10 +83,10 @@ program
           console.error(chalk.bold.red('Try:  apge generate --help'));
 
         } else if (schematic === 'storeservice') {
-          await generateStoreService(name);
+          await generateStoreService(name, jsonObject);
 
         } else if (schematic === 'restservice') {
-          await generateRestService(name);
+          await generateRestService(name, jsonObject);
 
         } else {
           console.error(chalk.bold.red('The generate command requires a type [restservice, storeservice] and a name.'));
