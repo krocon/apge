@@ -1,9 +1,9 @@
 {
   "name": "apge",
-  "version": "0.3.5",
+  "version": "0.3.6",
   "description": "Angular Project Generator",
   "scripts": {
-    "test": "jest",
+    "test": "jest --findRelatedTests bin/ lib/",
     "install-g-local": "npm uninstall -g apge & npm install -g ./",
     "npm-patch": "npm version patch",
     "git-push": "git commit -am ':-)' & git push",
@@ -52,6 +52,7 @@
     "window-size": "^1.1.1"
   },
   "devDependencies": {
-    "jest": "^25.4.0"
+    "jest": "^25.4.0",
+    "jest-cli": "^25.4.0"
   }
 }

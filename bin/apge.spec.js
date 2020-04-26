@@ -2,8 +2,13 @@ const path = require('path');
 const exec = require('child_process').exec;
 const pkg = require('../package.json');
 
-test('Code should be 0', async () => {
+test('Exit code should be 0', async () => {
   let result = await cli(['-v'], '.');
+  expect(result.code).toBe(0);
+})
+
+test('Version should be ' + pkg.version, async () => {
+  let result = await cli(['--version'], '.');
   expect(result.code).toBe(0);
   expect(extractVersion(result.stdout)).toBe(pkg.version);
 })
