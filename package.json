@@ -6,7 +6,6 @@
     "test": "jest --findRelatedTests bin/ lib/",
     "install-g-local": "npm uninstall -g apge & npm install -g ./",
     "npm-patch": "npm version patch",
-    "git-push": "git commit -am ':-)' & git push",
     "npm-publish": "npm publish"
   },
   "main": "lib/cmd-generate-new.js",
