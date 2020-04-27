@@ -6,7 +6,7 @@ import { HttpClient } from '@angular/common/http';
 
 
 @Injectable()
-export class __capitalizedCp__AuthAjaxService {
+export class __capcp__AuthAjaxService {
 
   private static readonly config = {
     mock: false,
@@ -25,7 +25,7 @@ export class __capitalizedCp__AuthAjaxService {
   }
 
   login(loginData: LoginRequestData): Observable<LoginResponseData> {
-    let url = __capitalizedCp__AuthAjaxService.config.loginUrl;
+    let url = __capcp__AuthAjaxService.config.loginUrl;
     if (url.indexOf('mock-data') > -1) {
       return this.http.get<LoginResponseData>(url);
     }

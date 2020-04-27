@@ -6,7 +6,7 @@ import { ChangeDetectionStrategy, Component, OnDestroy, OnInit } from '@angular/
   styleUrls: ['__cp__-imprint.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class __capitalizedCp__ImprintComponent implements OnInit, OnDestroy {
+export class __capcp__ImprintComponent implements OnInit, OnDestroy {
 
   constructor() {
   }

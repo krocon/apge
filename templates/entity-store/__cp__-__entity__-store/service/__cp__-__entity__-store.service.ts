@@ -1,29 +1,29 @@
 import { Injectable } from "@angular/core";
-import { __capitalizedCp__TypedDataService } from "../../__cp__-common/__cp__-typed-data-service";
-import { __capitalizedCp____capitalizedEntity__Data } from "../data/__cp__-__entity__.data";
+import { __capcp__TypedDataService } from "../../__cp__-common/__cp__-typed-data-service";
+import { __capcp____pascalentity__Data } from "../data/__cp__-__entity__.data";
 import { Observable } from "rxjs";
 
 @Injectable({
   providedIn: 'root',
 })
-export class __capitalizedCp____capitalizedEntity__StoreService {
+export class __capcp____pascalentity__StoreService {
 
   private static readonly innerService =
-    new __capitalizedCp__TypedDataService<__capitalizedCp____capitalizedEntity__Data>(
+    new __capcp__TypedDataService<__capcp____pascalentity__Data>(
       '__entity__', // key in localstorage
-      new __capitalizedCp____capitalizedEntity__Data() // default-value
+      new __capcp____pascalentity__Data() // default-value
     );
 
-  get valueChanges$(): Observable<__capitalizedCp____capitalizedEntity__Data> {
-    return __capitalizedCp____capitalizedEntity__StoreService.innerService.valueChanges$.asObservable();
+  get valueChanges$(): Observable<__capcp____pascalentity__Data> {
+    return __capcp____pascalentity__StoreService.innerService.valueChanges$.asObservable();
   }
 
-  getValue(): __capitalizedCp____capitalizedEntity__Data {
-    return __capitalizedCp____capitalizedEntity__StoreService.innerService.getValue();
+  getValue(): __capcp____pascalentity__Data {
+    return __capcp____pascalentity__StoreService.innerService.getValue();
   }
 
-  update(o: __capitalizedCp____capitalizedEntity__Data): void {
-    __capitalizedCp____capitalizedEntity__StoreService.innerService.update(o);
+  update(o: __capcp____pascalentity__Data): void {
+    __capcp____pascalentity__StoreService.innerService.update(o);
   }
 
 }

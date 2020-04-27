@@ -6,9 +6,9 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { HttpClientModule } from '@angular/common/http';
 import { MatGridListModule } from '@angular/material/grid-list';
 
-import { __capitalizedCp__DatenschutzComponent } from "./__cp__-datenschutz/__cp__-datenschutz.component";
-import { __capitalizedCp__ImprintComponent } from "./__cp__-imprint/__cp__-imprint.component";
-import { __capitalizedCp__NutzungsbedingungenComponent } from "./__cp__-nutzungsbedingungen/__cp__-nutzungsbedingungen.component";
+import { __capcp__DatenschutzComponent } from "./__cp__-datenschutz/__cp__-datenschutz.component";
+import { __capcp__ImprintComponent } from "./__cp__-imprint/__cp__-imprint.component";
+import { __capcp__NutzungsbedingungenComponent } from "./__cp__-nutzungsbedingungen/__cp__-nutzungsbedingungen.component";
 
 @NgModule({
   imports: [
@@ -18,22 +18,22 @@ import { __capitalizedCp__NutzungsbedingungenComponent } from "./__cp__-nutzungs
     RouterModule.forChild([
       {
         path: '',
-        component: __capitalizedCp__DatenschutzComponent,
+        component: __capcp__DatenschutzComponent,
         data: {depth: 1}
       },
       {
         path: 'datenschutz',
-        component: __capitalizedCp__DatenschutzComponent,
+        component: __capcp__DatenschutzComponent,
         data: {depth: 1}
       },
       {
         path: 'impressum',
-        component: __capitalizedCp__ImprintComponent,
+        component: __capcp__ImprintComponent,
         data: {depth: 1}
       },
       {
         path: 'nutzungsbedingungen',
-        component: __capitalizedCp__NutzungsbedingungenComponent,
+        component: __capcp__NutzungsbedingungenComponent,
         data: {depth: 1}
       }
     ]),
@@ -41,11 +41,11 @@ import { __capitalizedCp__NutzungsbedingungenComponent } from "./__cp__-nutzungs
     FlexLayoutModule
   ],
   declarations: [
-    __capitalizedCp__DatenschutzComponent,
-    __capitalizedCp__ImprintComponent,
-    __capitalizedCp__NutzungsbedingungenComponent
+    __capcp__DatenschutzComponent,
+    __capcp__ImprintComponent,
+    __capcp__NutzungsbedingungenComponent
   ],
   providers: []
 })
-export class __capitalizedCp__RechtlichesModule {
+export class __capcp__RechtlichesModule {
 }

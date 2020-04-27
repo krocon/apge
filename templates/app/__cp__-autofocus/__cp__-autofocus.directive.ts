@@ -12,12 +12,12 @@ import {
 const BASE_TIMER_DELAY = 50;
 
 @Directive({
-  selector: '[app__capitalizedCp__Autofocus]'
+  selector: '[app__capcp__Autofocus]'
 })
-export class __capitalizedCp__AutofocusDirective implements AfterContentInit, OnChanges, OnDestroy {
+export class __capcp__AutofocusDirective implements AfterContentInit, OnChanges, OnDestroy {
 
 
-  @Input('app__capitalizedCp__AutofocusDelay')
+  @Input('app__capcp__AutofocusDelay')
   public timerDelay: number | string = BASE_TIMER_DELAY;
 
   private timeout: any = null;
@@ -30,7 +30,7 @@ export class __capitalizedCp__AutofocusDirective implements AfterContentInit, On
 
   private _condition = false;
 
-  @Input('app__capitalizedCp__Autofocus')
+  @Input('app__capcp__Autofocus')
   set condition(value: string | boolean) {
     this._condition = typeof value === 'boolean' ? value : (value === 'true');
   }

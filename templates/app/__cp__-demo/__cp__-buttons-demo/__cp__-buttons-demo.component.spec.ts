@@ -1,18 +1,18 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { __capitalizedCp__ButtonsDemoComponent } from './__cp__-buttons-demo.component';
+import { __capcp__ButtonsDemoComponent } from './__cp__-buttons-demo.component';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
-import { __capitalizedCp__ButtonsDemoModule } from './__cp__-buttons-demo.module';
+import { __capcp__ButtonsDemoModule } from './__cp__-buttons-demo.module';
 import { RouterTestingModule } from '@angular/router/testing';
 
-describe('__capitalizedCp__ButtonsDemoComponent', () => {
-  let component: __capitalizedCp__ButtonsDemoComponent;
-  let fixture: ComponentFixture<__capitalizedCp__ButtonsDemoComponent>;
+describe('__capcp__ButtonsDemoComponent', () => {
+  let component: __capcp__ButtonsDemoComponent;
+  let fixture: ComponentFixture<__capcp__ButtonsDemoComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [
-        __capitalizedCp__ButtonsDemoModule,
+        __capcp__ButtonsDemoModule,
         NoopAnimationsModule,
         RouterTestingModule
       ]
@@ -21,7 +21,7 @@ describe('__capitalizedCp__ButtonsDemoComponent', () => {
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(__capitalizedCp__ButtonsDemoComponent);
+    fixture = TestBed.createComponent(__capcp__ButtonsDemoComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

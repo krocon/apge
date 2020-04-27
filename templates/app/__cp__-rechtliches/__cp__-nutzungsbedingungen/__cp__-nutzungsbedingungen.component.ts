@@ -6,7 +6,7 @@ import { ChangeDetectionStrategy, Component, OnDestroy, OnInit } from '@angular/
   styleUrls: ['__cp__-nutzungsbedingungen.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class __capitalizedCp__NutzungsbedingungenComponent implements OnInit, OnDestroy {
+export class __capcp__NutzungsbedingungenComponent implements OnInit, OnDestroy {
 
   constructor() {
   }

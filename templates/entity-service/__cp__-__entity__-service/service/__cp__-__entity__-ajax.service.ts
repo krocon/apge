@@ -1,15 +1,15 @@
 import { Injectable } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
 import { Observable } from "rxjs";
-import { __capitalizedCp____capitalizedEntity__DataIf } from "../data/__cp__-__entity__.data.if";
+import { __capcp____pascalentity__DataIf } from "../data/__cp__-__entity__.data.if";
 
 @Injectable({
   providedIn: 'root',
 })
-export class __capitalizedCp____capitalizedEntity__AjaxService {
+export class __capcp____pascalentity__AjaxService {
 
-  // TODO see url definitions (__cp____capitalizedEntity__Config) in environment.ts and environment.prod.ts
-  // see app.component.ts: __capitalizedCp____capitalizedEntity__AjaxService.forRoot(environment.__cp____capitalizedEntity__Config);
+  // TODO see url definitions (__cp____pascalentity__Config) in environment.ts and environment.prod.ts
+  // see app.component.ts: __capcp____pascalentity__AjaxService.forRoot(environment.__cp____pascalentity__Config);
 
   private static readonly config = {
     getUrl: 'assets/mock-data/__entity__/get.json',
@@ -28,46 +28,46 @@ export class __capitalizedCp____capitalizedEntity__AjaxService {
     Object.assign(this.config, config);
   }
 
-  getById(id: any): Observable<__capitalizedCp____capitalizedEntity__DataIf> {
-    let url = __capitalizedCp____capitalizedEntity__AjaxService.config.getUrl;
+  getById(id: any): Observable<__capcp____pascalentity__DataIf> {
+    let url = __capcp____pascalentity__AjaxService.config.getUrl;
     if (url.indexOf('mock-data') > -1) {
-      return this.http.get<__capitalizedCp____capitalizedEntity__DataIf>(url);
+      return this.http.get<__capcp____pascalentity__DataIf>(url);
     }
     url = url.replace(/:id/g, id);
-    return this.http.get<__capitalizedCp____capitalizedEntity__DataIf>(url);
+    return this.http.get<__capcp____pascalentity__DataIf>(url);
   }
 
-  getAll(): Observable<__capitalizedCp____capitalizedEntity__DataIf[]> {
-    let url = __capitalizedCp____capitalizedEntity__AjaxService.config.getAllUrl;
+  getAll(): Observable<__capcp____pascalentity__DataIf[]> {
+    let url = __capcp____pascalentity__AjaxService.config.getAllUrl;
     if (url.indexOf('mock-data') > -1) {
-      return this.http.get<__capitalizedCp____capitalizedEntity__DataIf[]>(url);
+      return this.http.get<__capcp____pascalentity__DataIf[]>(url);
     }
-    return this.http.get<__capitalizedCp____capitalizedEntity__DataIf[]>(url);
+    return this.http.get<__capcp____pascalentity__DataIf[]>(url);
   }
 
-  post(o: __capitalizedCp____capitalizedEntity__DataIf): Observable<__capitalizedCp____capitalizedEntity__DataIf> {
-    let url = __capitalizedCp____capitalizedEntity__AjaxService.config.postUrl;
+  post(o: __capcp____pascalentity__DataIf): Observable<__capcp____pascalentity__DataIf> {
+    let url = __capcp____pascalentity__AjaxService.config.postUrl;
     if (url.indexOf('mock-data') > -1) {
-      return this.http.get<__capitalizedCp____capitalizedEntity__DataIf>(url);
+      return this.http.get<__capcp____pascalentity__DataIf>(url);
     }
-    return this.http.post<__capitalizedCp____capitalizedEntity__DataIf>(url, o);
+    return this.http.post<__capcp____pascalentity__DataIf>(url, o);
   }
 
-  put(o: __capitalizedCp____capitalizedEntity__DataIf): Observable<__capitalizedCp____capitalizedEntity__DataIf> {
-    let url = __capitalizedCp____capitalizedEntity__AjaxService.config.putUrl;
+  put(o: __capcp____pascalentity__DataIf): Observable<__capcp____pascalentity__DataIf> {
+    let url = __capcp____pascalentity__AjaxService.config.putUrl;
     if (url.indexOf('mock-data') > -1) {
-      return this.http.get<__capitalizedCp____capitalizedEntity__DataIf>(url);
+      return this.http.get<__capcp____pascalentity__DataIf>(url);
     }
-    return this.http.put<__capitalizedCp____capitalizedEntity__DataIf>(url, o);
+    return this.http.put<__capcp____pascalentity__DataIf>(url, o);
   }
 
-  delete(id: any): Observable<__capitalizedCp____capitalizedEntity__DataIf> {
-    let url = __capitalizedCp____capitalizedEntity__AjaxService.config.deleteUrl;
+  delete(id: any): Observable<__capcp____pascalentity__DataIf> {
+    let url = __capcp____pascalentity__AjaxService.config.deleteUrl;
     if (url.indexOf('mock-data') > -1) {
-      return this.http.get<__capitalizedCp____capitalizedEntity__DataIf>(url);
+      return this.http.get<__capcp____pascalentity__DataIf>(url);
     }
     url = url.replace(/:id/g, id);
-    return this.http.delete<__capitalizedCp____capitalizedEntity__DataIf>(url);
+    return this.http.delete<__capcp____pascalentity__DataIf>(url);
   }
 
 }

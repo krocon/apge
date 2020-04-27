@@ -1,25 +1,25 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { __capitalizedCp__FontsDemoComponent } from './__cp__-fonts-demo.component';
+import { __capcp__FontsDemoComponent } from './__cp__-fonts-demo.component';
 import { RouterModule } from '@angular/router';
 
 
 @NgModule({
   declarations: [
-    __capitalizedCp__FontsDemoComponent
+    __capcp__FontsDemoComponent
   ],
   imports: [
     CommonModule,
     RouterModule.forChild([
       {
         path: 'fonts',
-        component: __capitalizedCp__FontsDemoComponent,
+        component: __capcp__FontsDemoComponent,
       }
     ]),
   ],
   providers: [
-    __capitalizedCp__FontsDemoComponent
+    __capcp__FontsDemoComponent
   ]
 })
-export class __capitalizedCp__FontsDemoModule {
+export class __capcp__FontsDemoModule {
 }

@@ -10,7 +10,7 @@ import { map, shareReplay, takeWhile } from "rxjs/operators";
   styleUrls: ['./__cp__-welcome.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class __capitalizedCp__WelcomeComponent implements OnDestroy {
+export class __capcp__WelcomeComponent implements OnDestroy {
 
   public environment = environment;
 

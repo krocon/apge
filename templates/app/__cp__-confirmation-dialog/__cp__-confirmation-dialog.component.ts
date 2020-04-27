@@ -9,12 +9,12 @@ import { ButtonData } from "./data/button.data";
   templateUrl: './__cp__-confirmation-dialog.component.html',
   styleUrls: ['./__cp__-confirmation-dialog.component.scss'],
 })
-export class __capitalizedCp__ConfirmationDialogComponent {
+export class __capcp__ConfirmationDialogComponent {
 
   public vertical = false;
 
   constructor(
-    public dialogRef: MatDialogRef<__capitalizedCp__ConfirmationDialogComponent>,
+    public dialogRef: MatDialogRef<__capcp__ConfirmationDialogComponent>,
     @Inject(MAT_DIALOG_DATA) public data: ConfirmationData,
   ) {
     this.vertical = data.vertical;

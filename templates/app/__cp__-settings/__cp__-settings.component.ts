@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, Component, OnDestroy, OnInit } from '@angular/core';
-import { __capitalizedCp__SettingsService } from './service/__cp__-settings.service';
+import { __capcp__SettingsService } from './service/__cp__-settings.service';
 import { Router } from '@angular/router';
-import { __capitalizedCp__SettingsData } from './data/settings.data';
+import { __capcp__SettingsData } from './data/settings.data';
 
 
 @Component({
@@ -10,13 +10,13 @@ import { __capitalizedCp__SettingsData } from './data/settings.data';
   styleUrls: ['__cp__-settings.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class __capitalizedCp__SettingsComponent implements OnInit, OnDestroy {
+export class __capcp__SettingsComponent implements OnInit, OnDestroy {
 
-  public data: __capitalizedCp__SettingsData = new __capitalizedCp__SettingsData();
+  public data: __capcp__SettingsData = new __capcp__SettingsData();
   private alive = true;
 
   constructor(
-    private readonly service: __capitalizedCp__SettingsService,
+    private readonly service: __capcp__SettingsService,
     private readonly router: Router,
   ) {
   }

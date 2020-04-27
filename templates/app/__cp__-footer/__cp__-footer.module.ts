@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { __capitalizedCp__FooterComponent } from './__cp__-footer.component';
+import { __capcp__FooterComponent } from './__cp__-footer.component';
 import { RouterModule } from '@angular/router';
 import { FlexModule } from '@angular/flex-layout';
 
 
 @NgModule({
   declarations: [
-    __capitalizedCp__FooterComponent
+    __capcp__FooterComponent
   ],
   imports: [
     CommonModule,
@@ -15,8 +15,8 @@ import { FlexModule } from '@angular/flex-layout';
     FlexModule,
   ],
   exports: [
-    __capitalizedCp__FooterComponent
+    __capcp__FooterComponent
   ]
 })
-export class __capitalizedCp__FooterModule {
+export class __capcp__FooterModule {
 }

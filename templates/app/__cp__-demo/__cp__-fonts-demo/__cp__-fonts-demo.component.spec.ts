@@ -1,17 +1,17 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { __capitalizedCp__FontsDemoComponent } from './__cp__-fonts-demo.component';
-import { __capitalizedCp__FontsDemoModule } from './__cp__-fonts-demo.module';
+import { __capcp__FontsDemoComponent } from './__cp__-fonts-demo.component';
+import { __capcp__FontsDemoModule } from './__cp__-fonts-demo.module';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
-describe('__capitalizedCp__FontsDemoComponent', () => {
-  let component: __capitalizedCp__FontsDemoComponent;
-  let fixture: ComponentFixture<__capitalizedCp__FontsDemoComponent>;
+describe('__capcp__FontsDemoComponent', () => {
+  let component: __capcp__FontsDemoComponent;
+  let fixture: ComponentFixture<__capcp__FontsDemoComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [
-        __capitalizedCp__FontsDemoModule,
+        __capcp__FontsDemoModule,
         NoopAnimationsModule
       ]
     })
@@ -19,7 +19,7 @@ describe('__capitalizedCp__FontsDemoComponent', () => {
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(__capitalizedCp__FontsDemoComponent);
+    fixture = TestBed.createComponent(__capcp__FontsDemoComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

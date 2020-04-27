@@ -8,7 +8,7 @@ import { ProgressBarMode } from '@angular/material/progress-bar';
   templateUrl: './__cp__-mix-demo.component.html',
   styleUrls: ['./__cp__-mix-demo.component.scss']
 })
-export class __capitalizedCp__MixDemoComponent implements OnInit {
+export class __capcp__MixDemoComponent implements OnInit {
 
   color: ThemePalette = 'primary';
   mode: ProgressSpinnerMode = 'indeterminate';

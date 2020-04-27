@@ -10,10 +10,10 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
-import { __capitalizedCp__NavModule } from "./__cp__-nav/__cp__-nav.module";
+import { __capcp__NavModule } from "./__cp__-nav/__cp__-nav.module";
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
-import { __capitalizedCp__AuthModule } from "./__cp__-auth/__cp__-auth.module";
+import { __capcp__AuthModule } from "./__cp__-auth/__cp__-auth.module";
 
 @NgModule({
   declarations: [
@@ -30,8 +30,8 @@ import { __capitalizedCp__AuthModule } from "./__cp__-auth/__cp__-auth.module";
     MatIconModule,
     MatListModule,
 
-    __capitalizedCp__NavModule,
-    __capitalizedCp__AuthModule,
+    __capcp__NavModule,
+    __capcp__AuthModule,
 
     ServiceWorkerModule.register('ngsw-worker.js', {enabled: environment.production})
   ],

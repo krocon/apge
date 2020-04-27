@@ -1,20 +1,20 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { __capitalizedCp__CountdownComponent } from './__cp__-countdown.component';
-import { __capitalizedCp__CountupComponent } from './__cp__-countup.component';
+import { __capcp__CountdownComponent } from './__cp__-countdown.component';
+import { __capcp__CountupComponent } from './__cp__-countup.component';
 
 @NgModule({
   imports: [
     CommonModule,
   ],
   declarations: [
-    __capitalizedCp__CountdownComponent,
-    __capitalizedCp__CountupComponent
+    __capcp__CountdownComponent,
+    __capcp__CountupComponent
   ],
   exports: [
-    __capitalizedCp__CountdownComponent,
-    __capitalizedCp__CountupComponent
+    __capcp__CountdownComponent,
+    __capcp__CountupComponent
   ]
 })
-export class __capitalizedCp__CounterModule {
+export class __capcp__CounterModule {
 }

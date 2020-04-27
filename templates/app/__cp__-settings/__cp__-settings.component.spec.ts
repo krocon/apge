@@ -1,17 +1,17 @@
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { __capitalizedCp__SettingsComponent } from './__cp__-settings.component';
+import { __capcp__SettingsComponent } from './__cp__-settings.component';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 
 describe('DbSettingsPage', () => {
-  let component: __capitalizedCp__SettingsComponent;
-  let fixture: ComponentFixture<__capitalizedCp__SettingsComponent>;
+  let component: __capcp__SettingsComponent;
+  let fixture: ComponentFixture<__capcp__SettingsComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [__capitalizedCp__SettingsComponent],
+      declarations: [__capcp__SettingsComponent],
       schemas: [CUSTOM_ELEMENTS_SCHEMA],
 
       imports: [
@@ -23,7 +23,7 @@ describe('DbSettingsPage', () => {
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(__capitalizedCp__SettingsComponent);
+    fixture = TestBed.createComponent(__capcp__SettingsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

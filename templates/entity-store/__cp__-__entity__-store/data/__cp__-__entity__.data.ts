@@ -1,5 +1,5 @@
 
-export class __capitalizedCp____capitalizedEntity__Data {
+export class __capcp____pascalentity__Data {
 
   constructor(
     // TODO set properties with default values:

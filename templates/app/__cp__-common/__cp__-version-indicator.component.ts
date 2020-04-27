@@ -26,7 +26,7 @@ import { environment } from "../../environments/environment";
     </div>
   `
 })
-export class __capitalizedCp__VersionIndicatorComponent {
+export class __capcp__VersionIndicatorComponent {
 
   public environment = environment;
 

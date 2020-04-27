@@ -1,17 +1,17 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { __capitalizedCp__FormsDemoComponent } from './__cp__-forms-demo.component';
-import { __capitalizedCp__FormsDemoModule } from './__cp__-forms-demo.module';
+import { __capcp__FormsDemoComponent } from './__cp__-forms-demo.component';
+import { __capcp__FormsDemoModule } from './__cp__-forms-demo.module';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
-describe('__capitalizedCp__FormsDemoComponent', () => {
-  let component: __capitalizedCp__FormsDemoComponent;
-  let fixture: ComponentFixture<__capitalizedCp__FormsDemoComponent>;
+describe('__capcp__FormsDemoComponent', () => {
+  let component: __capcp__FormsDemoComponent;
+  let fixture: ComponentFixture<__capcp__FormsDemoComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [
-        __capitalizedCp__FormsDemoModule,
+        __capcp__FormsDemoModule,
         NoopAnimationsModule
       ]
     })
@@ -19,7 +19,7 @@ describe('__capitalizedCp__FormsDemoComponent', () => {
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(__capitalizedCp__FormsDemoComponent);
+    fixture = TestBed.createComponent(__capcp__FormsDemoComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

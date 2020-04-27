@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 
 @Injectable()
-export class __capitalizedCp__TableHelperService {
+export class __capcp__TableHelperService {
 
   static get2Digits(n: number): string {
     if (n < 10) {
@@ -26,11 +26,11 @@ export class __capitalizedCp__TableHelperService {
       const minute = da.getMinutes();
       const second = da.getSeconds();
 
-      const d = __capitalizedCp__TableHelperService.get2Digits(day);
-      const m = __capitalizedCp__TableHelperService.get2Digits(month);
-      const h = __capitalizedCp__TableHelperService.get2Digits(hour);
-      const mi = __capitalizedCp__TableHelperService.get2Digits(minute);
-      const s = __capitalizedCp__TableHelperService.get2Digits(second);
+      const d = __capcp__TableHelperService.get2Digits(day);
+      const m = __capcp__TableHelperService.get2Digits(month);
+      const h = __capcp__TableHelperService.get2Digits(hour);
+      const mi = __capcp__TableHelperService.get2Digits(minute);
+      const s = __capcp__TableHelperService.get2Digits(second);
       return `<b>${d}.${m} ${year}</b> ${h}:${mi}<small>:${s}</small>`;
     } catch (e) {
       return st;
@@ -47,8 +47,8 @@ export class __capitalizedCp__TableHelperService {
       const month = da.getMonth() + 1;
       const day = da.getDate();
 
-      const d = __capitalizedCp__TableHelperService.get2Digits(day);
-      const m = __capitalizedCp__TableHelperService.get2Digits(month);
+      const d = __capcp__TableHelperService.get2Digits(day);
+      const m = __capcp__TableHelperService.get2Digits(month);
       return `${d}.${m} ${year}`;
 
     } catch (e) {
@@ -67,9 +67,9 @@ export class __capitalizedCp__TableHelperService {
       const minute = d.getUTCMinutes();
       const second = d.getUTCSeconds();
 
-      const h = __capitalizedCp__TableHelperService.get2Digits(hour);
-      const mi = __capitalizedCp__TableHelperService.get2Digits(minute);
-      const s = __capitalizedCp__TableHelperService.get2Digits(second);
+      const h = __capcp__TableHelperService.get2Digits(hour);
+      const mi = __capcp__TableHelperService.get2Digits(minute);
+      const s = __capcp__TableHelperService.get2Digits(second);
 
       return `${h}:${mi}<small>:${s}</small>`;
     } catch (e) {

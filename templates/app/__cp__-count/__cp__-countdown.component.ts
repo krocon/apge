@@ -24,7 +24,7 @@ import {
   `],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class __capitalizedCp__CountdownComponent implements OnDestroy, AfterViewInit {
+export class __capcp__CountdownComponent implements OnDestroy, AfterViewInit {
 
 
   @Input() startTimeInMillis: number;
@@ -69,8 +69,8 @@ export class __capitalizedCp__CountdownComponent implements OnDestroy, AfterView
     }
     const now = Date.now();
     const remainingInMillis = this.startTimeInMillis + this.diffTimeInMillis - now;
-    const seconds = __capitalizedCp__CountdownComponent.pad((remainingInMillis / 1000) % 60);
-    const minutes = __capitalizedCp__CountdownComponent.pad((remainingInMillis / 1000 / 60) % 60);
+    const seconds = __capcp__CountdownComponent.pad((remainingInMillis / 1000) % 60);
+    const minutes = __capcp__CountdownComponent.pad((remainingInMillis / 1000 / 60) % 60);
     // const hours = this.pad((total / (1000 * 60 * 60)) % 24);
     // const days = this.pad(total / (1000 * 60 * 60 * 24));
 

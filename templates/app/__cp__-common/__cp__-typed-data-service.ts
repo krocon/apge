@@ -1,6 +1,6 @@
 import { BehaviorSubject } from 'rxjs';
 
-export class __capitalizedCp__TypedDataService<T> {
+export class __capcp__TypedDataService<T> {
 
   readonly valueChanges$: BehaviorSubject<T> = new BehaviorSubject<T>(null);
   private value: T;

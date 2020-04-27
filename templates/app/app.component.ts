@@ -1,9 +1,8 @@
 import { Component } from '@angular/core';
-import { __capitalizedCp__NavComponent } from "./__cp__-nav/__cp__-nav.component";
-import { __capitalizedCp__AuthAjaxService } from "./__cp__-auth/service/__cp__-auth.ajax.service";
+import { __capcp__NavComponent } from "./__cp__-nav/__cp__-nav.component";
+import { __capcp__AuthAjaxService } from "./__cp__-auth/service/__cp__-auth.ajax.service";
 import { environment } from "../environments/environment";
-import { __capitalizedCp__AuthGuardCanActivate } from "./__cp__-auth/__cp__-auth-guard-can-activate";
-// import { __capitalizedCp____capitalizedEntity__AjaxService } from "./__cp__-__entity__-service/service/__cp__-__entity__-ajax.service";
+import { __capcp__AuthGuardCanActivate } from "./__cp__-auth/__cp__-auth-guard-can-activate";
 
 @Component({
   selector: 'app-root',
@@ -13,7 +12,7 @@ import { __capitalizedCp__AuthGuardCanActivate } from "./__cp__-auth/__cp__-auth
 export class AppComponent {
 
   constructor() {
-    __capitalizedCp__NavComponent.forRoot({
+    __capcp__NavComponent.forRoot({
         routeTitles: {
           home: 'Herzlich willkommen!',
           login: 'Anmelden',
@@ -28,12 +27,10 @@ export class AppComponent {
         menuIconsVisible: true,
       }
     );
-    __capitalizedCp__AuthGuardCanActivate.forRoot({
+    __capcp__AuthGuardCanActivate.forRoot({
       loginRoute: environment.loginRoute
     });
-    __capitalizedCp__AuthAjaxService.forRoot(environment.authServiceConfig);
-
-    // __capitalizedCp____capitalizedEntity__AjaxService.forRoot(environment.__cp____capitalizedEntity__Config);
+    __capcp__AuthAjaxService.forRoot(environment.authServiceConfig);
   }
 
 }

@@ -1,11 +1,11 @@
 import { Inject, Injectable } from '@angular/core';
 import { ActivatedRouteSnapshot, CanActivate, CanActivateChild, Router, RouterStateSnapshot } from '@angular/router';
 import { DOCUMENT } from '@angular/common';
-import { __capitalizedCp__AuthService } from "./service/__cp__-auth.service";
+import { __capcp__AuthService } from "./service/__cp__-auth.service";
 
 
 @Injectable()
-export class __capitalizedCp__AuthGuardCanActivate implements CanActivate, CanActivateChild {
+export class __capcp__AuthGuardCanActivate implements CanActivate, CanActivateChild {
 
   private static readonly config = {
     loginRoute: '/anmelden'
@@ -13,7 +13,7 @@ export class __capitalizedCp__AuthGuardCanActivate implements CanActivate, CanAc
 
   constructor(
     private readonly router: Router,
-    private readonly authService: __capitalizedCp__AuthService,
+    private readonly authService: __capcp__AuthService,
     @Inject(DOCUMENT) private readonly document: any
   ) {
   }
@@ -43,7 +43,7 @@ export class __capitalizedCp__AuthGuardCanActivate implements CanActivate, CanAc
     // Store the attempted URL for redirecting
     this.authService.setRedirectUrl(url);
 
-    this.router.navigate([__capitalizedCp__AuthGuardCanActivate.config.loginRoute]);
+    this.router.navigate([__capcp__AuthGuardCanActivate.config.loginRoute]);
     return false;
   }
 

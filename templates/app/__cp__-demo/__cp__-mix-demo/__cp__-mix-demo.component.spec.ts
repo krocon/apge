@@ -1,16 +1,16 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { __capitalizedCp__MixDemoComponent } from './__cp__-mix-demo.component';
-import { __capitalizedCp__MixDemoModule } from './__cp__-mix-demo.module';
+import { __capcp__MixDemoComponent } from './__cp__-mix-demo.component';
+import { __capcp__MixDemoModule } from './__cp__-mix-demo.module';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
-describe('__capitalizedCp__MixDemoComponent', () => {
-  let component: __capitalizedCp__MixDemoComponent;
-  let fixture: ComponentFixture<__capitalizedCp__MixDemoComponent>;
+describe('__capcp__MixDemoComponent', () => {
+  let component: __capcp__MixDemoComponent;
+  let fixture: ComponentFixture<__capcp__MixDemoComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [
-        __capitalizedCp__MixDemoModule,
+        __capcp__MixDemoModule,
         NoopAnimationsModule
       ]
     })
@@ -18,7 +18,7 @@ describe('__capitalizedCp__MixDemoComponent', () => {
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(__capitalizedCp__MixDemoComponent);
+    fixture = TestBed.createComponent(__capcp__MixDemoComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

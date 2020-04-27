@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 
 
 @Injectable()
-export class __capitalizedCp__MetaService<T> {
+export class __capcp__MetaService<T> {
 
   readonly = false;
 

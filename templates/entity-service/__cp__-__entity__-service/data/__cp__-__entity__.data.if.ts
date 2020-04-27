@@ -1,4 +1,4 @@
-export interface __capitalizedCp____capitalizedEntity__DataIf {
+export interface __capcp____pascalentity__DataIf {
 
   id: number|string,
   name: string,

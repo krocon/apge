@@ -81,9 +81,7 @@ async function main() {
 
   for (let i = 0; i < replacements.length; i++) {
     const replacement = replacements[i];
-    console.info('i', i);
     for (let j = 0; j < replacement.regs.length; j++) {
-      console.info('j', j);
       const reg = replacement.regs;
       try {
         const ret = replace.sync({

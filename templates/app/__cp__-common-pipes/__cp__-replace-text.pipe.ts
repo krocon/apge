@@ -1,7 +1,7 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({name: '__cp__ReplaceText'})
-export class __capitalizedCp__ReplaceTextPipe implements PipeTransform {
+export class __capcp__ReplaceTextPipe implements PipeTransform {
 
   transform(s: string, regexp: string, replaceValue: string): string {
     if (!s) {

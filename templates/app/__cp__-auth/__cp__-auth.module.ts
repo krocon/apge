@@ -11,18 +11,18 @@ import { MatFormFieldModule } from "@angular/material/form-field";
 import { MatInputModule } from "@angular/material/input";
 import { MatButtonModule } from "@angular/material/button";
 
-import { __capitalizedCp__AuthService } from './service/__cp__-auth.service';
-import { __capitalizedCp__AuthAjaxService } from './service/__cp__-auth.ajax.service';
-import { __capitalizedCp__AuthGuardCanActivate } from './__cp__-auth-guard-can-activate';
-import { __capitalizedCp__AuthLogoutComponent } from './__cp__-logout/__cp__-auth-logout.component';
-import { __capitalizedCp__ConfirmationModule } from "../__cp__-confirmation-dialog/__cp__-confirmation.module";
-import { __capitalizedCp__LoginPageComponent } from "./__cp__-login/__cp__-login-page.component";
-import { __capitalizedCp__AutofocusModule, } from "../__cp__-autofocus/__cp__-common.module";
+import { __capcp__AuthService } from './service/__cp__-auth.service';
+import { __capcp__AuthAjaxService } from './service/__cp__-auth.ajax.service';
+import { __capcp__AuthGuardCanActivate } from './__cp__-auth-guard-can-activate';
+import { __capcp__AuthLogoutComponent } from './__cp__-logout/__cp__-auth-logout.component';
+import { __capcp__ConfirmationModule } from "../__cp__-confirmation-dialog/__cp__-confirmation.module";
+import { __capcp__LoginPageComponent } from "./__cp__-login/__cp__-login-page.component";
+import { __capcp__AutofocusModule, } from "../__cp__-autofocus/__cp__-common.module";
 
 
 const routes = [
-  {path: 'anmelden', component: __capitalizedCp__LoginPageComponent},
-  {path: 'abmelden', component: __capitalizedCp__AuthLogoutComponent},
+  {path: 'anmelden', component: __capcp__LoginPageComponent},
+  {path: 'abmelden', component: __capcp__AuthLogoutComponent},
 ];
 
 @NgModule({
@@ -40,23 +40,23 @@ const routes = [
     MatIconModule,
     MatFormFieldModule,
 
-    __capitalizedCp__ConfirmationModule,
-    __capitalizedCp__AutofocusModule,
+    __capcp__ConfirmationModule,
+    __capcp__AutofocusModule,
   ],
   entryComponents: [],
   declarations: [
-    __capitalizedCp__AuthLogoutComponent,
-    __capitalizedCp__LoginPageComponent
+    __capcp__AuthLogoutComponent,
+    __capcp__LoginPageComponent
   ],
   exports: [
     RouterModule
   ],
   providers: [
-    __capitalizedCp__AuthService,
-    __capitalizedCp__AuthAjaxService,
-    __capitalizedCp__AuthGuardCanActivate
+    __capcp__AuthService,
+    __capcp__AuthAjaxService,
+    __capcp__AuthGuardCanActivate
   ]
 })
-export class __capitalizedCp__AuthModule {
+export class __capcp__AuthModule {
 }
 

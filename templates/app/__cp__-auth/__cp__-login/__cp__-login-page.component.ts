@@ -3,8 +3,8 @@ import { Router } from '@angular/router';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { HttpErrorResponse } from '@angular/common/http';
 import { takeWhile } from 'rxjs/operators';
-import { __capitalizedCp__TypedDataService } from "../../__cp__-common/__cp__-typed-data-service";
-import { __capitalizedCp__AuthService } from "../service/__cp__-auth.service";
+import { __capcp__TypedDataService } from "../../__cp__-common/__cp__-typed-data-service";
+import { __capcp__AuthService } from "../service/__cp__-auth.service";
 import { LoginRequestData } from "../data/login.request.data";
 
 @Component({
@@ -13,10 +13,10 @@ import { LoginRequestData } from "../data/login.request.data";
   styleUrls: ['./__cp__-login-page.component.scss'],
 })
 
-export class __capitalizedCp__LoginPageComponent implements OnInit, OnDestroy {
+export class __capcp__LoginPageComponent implements OnInit, OnDestroy {
 
   private static readonly innerService =
-    new __capitalizedCp__TypedDataService<LoginRequestData>('login', new LoginRequestData('', '', true));
+    new __capcp__TypedDataService<LoginRequestData>('login', new LoginRequestData('', '', true));
 
   @ViewChild('username', {static: false}) username: ElementRef;
 
@@ -38,7 +38,7 @@ export class __capitalizedCp__LoginPageComponent implements OnInit, OnDestroy {
   private alive = true;
 
   constructor(
-    private readonly authService: __capitalizedCp__AuthService,
+    private readonly authService: __capcp__AuthService,
     private readonly formBuilder: FormBuilder,
     public readonly router: Router
   ) {
@@ -91,7 +91,7 @@ export class __capitalizedCp__LoginPageComponent implements OnInit, OnDestroy {
         password: new FormControl('', [Validators.required, Validators.minLength(2)]),
         remember: new FormControl(false)
       });
-    const loginData = __capitalizedCp__LoginPageComponent.innerService.getValue();
+    const loginData = __capcp__LoginPageComponent.innerService.getValue();
     if (loginData?.remember) {
       this.formGroup.patchValue(loginData);
       this.focusOnPassword = !!loginData.username;
@@ -140,7 +140,7 @@ export class __capitalizedCp__LoginPageComponent implements OnInit, OnDestroy {
     if (this.formGroup.valid) {
       const raw: LoginRequestData = this.formGroup.getRawValue() as LoginRequestData;
       let loginRequestData = new LoginRequestData(raw.username, '', raw.remember);
-      __capitalizedCp__LoginPageComponent.innerService.update(loginRequestData);
+      __capcp__LoginPageComponent.innerService.update(loginRequestData);
 
       this.resetErrors();
       this.buttonSpinnerVisible = true;

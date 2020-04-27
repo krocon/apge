@@ -5,7 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './__cp__-buttons-demo.component.html',
   styleUrls: ['./__cp__-buttons-demo.component.scss']
 })
-export class __capitalizedCp__ButtonsDemoComponent implements OnInit {
+export class __capcp__ButtonsDemoComponent implements OnInit {
 
   constructor() {
   }

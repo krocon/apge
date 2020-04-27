@@ -6,6 +6,6 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   styleUrls: ['__cp__-datenschutz.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class __capitalizedCp__DatenschutzComponent {
+export class __capcp__DatenschutzComponent {
 
 }

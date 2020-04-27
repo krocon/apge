@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { __capitalizedCp__FormsDemoComponent } from './__cp__-forms-demo.component';
+import { __capcp__FormsDemoComponent } from './__cp__-forms-demo.component';
 import { RouterModule } from '@angular/router';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
@@ -14,7 +14,7 @@ import { FlexLayoutModule, FlexModule } from '@angular/flex-layout';
 
 @NgModule({
   declarations: [
-    __capitalizedCp__FormsDemoComponent
+    __capcp__FormsDemoComponent
   ],
   imports: [
     CommonModule,
@@ -25,7 +25,7 @@ import { FlexLayoutModule, FlexModule } from '@angular/flex-layout';
     RouterModule.forChild([
       {
         path: 'forms',
-        component: __capitalizedCp__FormsDemoComponent,
+        component: __capcp__FormsDemoComponent,
       }
     ]),
     MatFormFieldModule,
@@ -37,9 +37,9 @@ import { FlexLayoutModule, FlexModule } from '@angular/flex-layout';
     MatSlideToggleModule
   ],
   providers: [
-    __capitalizedCp__FormsDemoComponent
+    __capcp__FormsDemoComponent
   ]
 })
 
-export class __capitalizedCp__FormsDemoModule {
+export class __capcp__FormsDemoModule {
 }

@@ -1,4 +1,4 @@
-export class __capitalizedCp__SettingsData {
+export class __capcp__SettingsData {
 
   public theme = 'light';
   public menuHidden = false;

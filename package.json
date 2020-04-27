@@ -1,6 +1,6 @@
 {
   "name": "apge",
-  "version": "0.3.6",
+  "version": "0.3.7",
   "description": "Angular Project Generator",
   "scripts": {
     "test": "jest --findRelatedTests bin/ lib/",
@@ -24,9 +24,9 @@
     "seed"
   ],
   "files": [
-    "bin/apge.js",
-    "lib/cmd-generate-new.js",
-    "lib/cmd-update.js",
+    "bin/*.*",
+    "lib/*.*",
+    "templates/*.*",
     "!test"
   ],
   "readmeFilename": "README.md",

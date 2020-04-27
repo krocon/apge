@@ -6,7 +6,7 @@ import { ThemePalette } from '@angular/material/core';
   templateUrl: './__cp__-forms-demo.component.html',
   styleUrls: ['./__cp__-forms-demo.component.scss']
 })
-export class __capitalizedCp__FormsDemoComponent {
+export class __capcp__FormsDemoComponent {
 
   selected = 'option2';
   checked = true;

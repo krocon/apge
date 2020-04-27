@@ -1,16 +1,16 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { __capitalizedCp____capitalizedEntity__AjaxService } from "./service/__cp__-__entity__-ajax.service";
-import { __capitalizedCp____capitalizedEntity__Service } from "./service/__cp__-__entity__.service";
+import { __capcp____pascalentity__AjaxService } from "./service/__cp__-__entity__-ajax.service";
+import { __capcp____pascalentity__Service } from "./service/__cp__-__entity__.service";
 
 
 @NgModule({
   providers: [
-    __capitalizedCp____capitalizedEntity__Service,
-    __capitalizedCp____capitalizedEntity__AjaxService
+    __capcp____pascalentity__Service,
+    __capcp____pascalentity__AjaxService
   ],
   imports: [
     CommonModule
   ]
 })
-export class __capitalizedCp____capitalizedEntity__ServiceModule { }
+export class __capcp____pascalentity__ServiceModule { }

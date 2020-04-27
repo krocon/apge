@@ -2,12 +2,12 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatButtonModule } from '@angular/material/button';
 import { RouterModule } from '@angular/router';
-import { __capitalizedCp__WelcomeComponent } from "./__cp__-welcome.component";
+import { __capcp__WelcomeComponent } from "./__cp__-welcome.component";
 import { ExtendedModule, FlexLayoutModule, FlexModule } from "@angular/flex-layout";
 
 @NgModule({
   declarations: [
-    __capitalizedCp__WelcomeComponent
+    __capcp__WelcomeComponent
   ],
   imports: [
     CommonModule,
@@ -15,7 +15,7 @@ import { ExtendedModule, FlexLayoutModule, FlexModule } from "@angular/flex-layo
     RouterModule.forChild([
       {
         path: '',
-        component: __capitalizedCp__WelcomeComponent
+        component: __capcp__WelcomeComponent
       }
     ]),
     ExtendedModule,
@@ -23,5 +23,5 @@ import { ExtendedModule, FlexLayoutModule, FlexModule } from "@angular/flex-layo
     FlexLayoutModule,
   ]
 })
-export class __capitalizedCp__WelcomeModule {
+export class __capcp__WelcomeModule {
 }

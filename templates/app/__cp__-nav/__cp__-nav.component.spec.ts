@@ -7,15 +7,15 @@ import { MatListModule } from '@angular/material/list';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
 
-import { __capitalizedCp__NavComponent } from './__cp__-nav.component';
+import { __capcp__NavComponent } from './__cp__-nav.component';
 
 describe('DbNavComponent', () => {
-  let component: __capitalizedCp__NavComponent;
-  let fixture: ComponentFixture<__capitalizedCp__NavComponent>;
+  let component: __capcp__NavComponent;
+  let fixture: ComponentFixture<__capcp__NavComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [__capitalizedCp__NavComponent],
+      declarations: [__capcp__NavComponent],
       imports: [
         NoopAnimationsModule,
         LayoutModule,
@@ -29,7 +29,7 @@ describe('DbNavComponent', () => {
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(__capitalizedCp__NavComponent);
+    fixture = TestBed.createComponent(__capcp__NavComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -1,20 +1,20 @@
 import { Injectable } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { Observable } from 'rxjs';
-import { __capitalizedCp__ConfirmationDialogComponent } from './__cp__-confirmation-dialog.component';
+import { __capcp__ConfirmationDialogComponent } from './__cp__-confirmation-dialog.component';
 import { takeWhile } from 'rxjs/operators';
 import { ConfirmationData } from "./data/confirmation.data";
 import { ButtonData } from "./data/button.data";
 
 @Injectable()
-export class __capitalizedCp__ConfirmationDialogService {
+export class __capcp__ConfirmationDialogService {
 
   constructor(public dialog: MatDialog) {
   }
 
   public confirm(data: ConfirmationData): Observable<string> {
     return this.dialog
-      .open(__capitalizedCp__ConfirmationDialogComponent, {
+      .open(__capcp__ConfirmationDialogComponent, {
         height: data.height,
         width: data.width,
         data,
@@ -24,7 +24,7 @@ export class __capitalizedCp__ConfirmationDialogService {
   }
 
 
-  public showError(phrases: Array<string>): Observable<__capitalizedCp__ConfirmationDialogComponent> {
+  public showError(phrases: Array<string>): Observable<__capcp__ConfirmationDialogComponent> {
     const title = 'Fehler';
     const buttons: Array<ButtonData> = [
       new ButtonData('CANCEL', 'Schliessen', 'warn')
@@ -32,7 +32,7 @@ export class __capitalizedCp__ConfirmationDialogService {
     const data: ConfirmationData = new ConfirmationData(title, phrases, buttons);
     data.cssClass = '__cp__-color-red-1';
     return this.dialog
-      .open(__capitalizedCp__ConfirmationDialogComponent, {
+      .open(__capcp__ConfirmationDialogComponent, {
         height: data.height,
         width: data.width,
         data,
@@ -42,7 +42,7 @@ export class __capitalizedCp__ConfirmationDialogService {
   }
 
 
-  public showInfo(phrases: Array<string>): Observable<__capitalizedCp__ConfirmationDialogComponent> {
+  public showInfo(phrases: Array<string>): Observable<__capcp__ConfirmationDialogComponent> {
     const title = 'Hinweis';
     const buttons: Array<ButtonData> = [
       new ButtonData('CANCEL', 'Schliessen', 'warn')
@@ -50,7 +50,7 @@ export class __capitalizedCp__ConfirmationDialogService {
     const data: ConfirmationData = new ConfirmationData(title, phrases, buttons);
 
     return this.dialog
-      .open(__capitalizedCp__ConfirmationDialogComponent, {
+      .open(__capcp__ConfirmationDialogComponent, {
         height: data.height,
         width: data.width,
         data,
@@ -69,7 +69,7 @@ export class __capitalizedCp__ConfirmationDialogService {
       ]);
 
     const dlg = this.dialog
-      .open(__capitalizedCp__ConfirmationDialogComponent,
+      .open(__capcp__ConfirmationDialogComponent,
         {
           height: data.height,
           width: data.width,

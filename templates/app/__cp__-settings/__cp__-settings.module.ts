@@ -3,12 +3,12 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 
-import { __capitalizedCp__SettingsComponent } from './__cp__-settings.component';
+import { __capcp__SettingsComponent } from './__cp__-settings.component';
 import { HttpClientModule } from '@angular/common/http';
 import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
-import { __capitalizedCp__SettingsService } from "./service/__cp__-settings.service";
+import { __capcp__SettingsService } from "./service/__cp__-settings.service";
 
 
 @NgModule({
@@ -18,7 +18,7 @@ import { __capitalizedCp__SettingsService } from "./service/__cp__-settings.serv
     RouterModule.forChild([
       {
         path: '',
-        component: __capitalizedCp__SettingsComponent
+        component: __capcp__SettingsComponent
       }
     ]),
     HttpClientModule,
@@ -28,18 +28,18 @@ import { __capitalizedCp__SettingsService } from "./service/__cp__-settings.serv
   ],
   exports: [],
   declarations: [
-    __capitalizedCp__SettingsComponent
+    __capcp__SettingsComponent
   ],
   providers: [
-    __capitalizedCp__SettingsService
+    __capcp__SettingsService
   ]
 })
-export class __capitalizedCp__SettingsModule {
+export class __capcp__SettingsModule {
 
-  constructor(@Optional() @SkipSelf() parentModule: __capitalizedCp__SettingsModule) {
+  constructor(@Optional() @SkipSelf() parentModule: __capcp__SettingsModule) {
     if (parentModule) {
       throw new Error(
-        '__capitalizedCp__SettingsModule is already loaded. Import it in the AppModule only.');
+        '__capcp__SettingsModule is already loaded. Import it in the AppModule only.');
     }
   }
 

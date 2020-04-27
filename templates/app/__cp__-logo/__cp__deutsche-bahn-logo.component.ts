@@ -53,7 +53,7 @@ import { AfterViewInit, ChangeDetectorRef, Component, Input } from '@angular/cor
     }
   `]
 })
-export class __capitalizedCp__DeutscheBahnLogoComponent implements AfterViewInit {
+export class __capcp__DeutscheBahnLogoComponent implements AfterViewInit {
 
   @Input()
   set height(value: number) {

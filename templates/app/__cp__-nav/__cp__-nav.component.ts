@@ -12,7 +12,7 @@ import { map, shareReplay, takeWhile } from 'rxjs/operators';
 import { NavigationEnd, Router } from "@angular/router";
 import { MatSidenav, MatSidenavContent } from "@angular/material/sidenav";
 import { environment } from "../../environments/environment";
-import { __capitalizedCp__AuthService } from "../__cp__-auth/service/__cp__-auth.service";
+import { __capcp__AuthService } from "../__cp__-auth/service/__cp__-auth.service";
 import { LoginResponseData } from "../__cp__-auth/data/login.response.data";
 
 @Component({
@@ -21,7 +21,7 @@ import { LoginResponseData } from "../__cp__-auth/data/login.response.data";
   styleUrls: ['./__cp__-nav.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class __capitalizedCp__NavComponent implements OnDestroy {
+export class __capcp__NavComponent implements OnDestroy {
 
   private static readonly config = {
     routeTitles: {
@@ -58,21 +58,21 @@ export class __capitalizedCp__NavComponent implements OnDestroy {
   constructor(
     private breakpointObserver: BreakpointObserver,
     private readonly router: Router,
-    private readonly authService: __capitalizedCp__AuthService,
+    private readonly authService: __capcp__AuthService,
     private readonly cdr: ChangeDetectorRef
   ) {
   }
 
   get cfg() {
-    return __capitalizedCp__NavComponent.config;
+    return __capcp__NavComponent.config;
   }
 
   get menuIconsVisible() {
-    return __capitalizedCp__NavComponent.config.menuIconsVisible;
+    return __capcp__NavComponent.config.menuIconsVisible;
   }
 
   get logoutCounterVisible() {
-    return __capitalizedCp__NavComponent.config.logoutCounterVisible;
+    return __capcp__NavComponent.config.logoutCounterVisible;
   }
 
   static forRoot(config) {
@@ -96,7 +96,7 @@ export class __capitalizedCp__NavComponent implements OnDestroy {
       .subscribe(evt => {
         if (evt instanceof NavigationEnd) {
           this.matSidenavContent.scrollTo({top: 0, left: 0});
-          const routeTitles = __capitalizedCp__NavComponent.config.routeTitles;
+          const routeTitles = __capcp__NavComponent.config.routeTitles;
           const keys = Object.keys(routeTitles);
           let url = evt.url.replace(/\//g, '');
           for (const key of keys) {

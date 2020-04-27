@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { __capitalizedCp__MixDemoComponent } from './__cp__-mix-demo.component';
+import { __capcp__MixDemoComponent } from './__cp__-mix-demo.component';
 import { RouterModule } from '@angular/router';
 import { MatRadioModule } from '@angular/material/radio';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -20,7 +20,7 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
 
 @NgModule({
   declarations: [
-    __capitalizedCp__MixDemoComponent
+    __capcp__MixDemoComponent
   ],
   imports: [
     CommonModule,
@@ -31,7 +31,7 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
     RouterModule.forChild([
       {
         path: 'mix',
-        component: __capitalizedCp__MixDemoComponent,
+        component: __capcp__MixDemoComponent,
       }
     ]),
     MatRadioModule,
@@ -51,8 +51,8 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
     MatProgressSpinnerModule
   ],
   providers: [
-    __capitalizedCp__MixDemoComponent
+    __capcp__MixDemoComponent
   ]
 })
-export class __capitalizedCp__MixDemoModule {
+export class __capcp__MixDemoModule {
 }

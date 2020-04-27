@@ -5,7 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './__cp__-fonts-demo.component.html',
   styleUrls: ['./__cp__-fonts-demo.component.scss']
 })
-export class __capitalizedCp__FontsDemoComponent implements OnInit {
+export class __capcp__FontsDemoComponent implements OnInit {
 
   constructor() {
   }

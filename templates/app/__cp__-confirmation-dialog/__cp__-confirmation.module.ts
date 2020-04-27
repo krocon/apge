@@ -7,8 +7,8 @@ import { MatDividerModule } from '@angular/material/divider';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { FormsModule } from '@angular/forms';
-import { __capitalizedCp__ConfirmationDialogComponent } from './__cp__-confirmation-dialog.component';
-import { __capitalizedCp__ConfirmationDialogService } from './__cp__-confirmation-dialog.service';
+import { __capcp__ConfirmationDialogComponent } from './__cp__-confirmation-dialog.component';
+import { __capcp__ConfirmationDialogService } from './__cp__-confirmation-dialog.service';
 
 @NgModule({
   imports: [
@@ -22,16 +22,16 @@ import { __capitalizedCp__ConfirmationDialogService } from './__cp__-confirmatio
     MatCheckboxModule
   ],
   entryComponents: [
-    __capitalizedCp__ConfirmationDialogComponent
+    __capcp__ConfirmationDialogComponent
   ],
   declarations: [
-    __capitalizedCp__ConfirmationDialogComponent,
+    __capcp__ConfirmationDialogComponent,
   ],
   exports: [],
   providers: [
-    __capitalizedCp__ConfirmationDialogService
+    __capcp__ConfirmationDialogService
   ]
 })
-export class __capitalizedCp__ConfirmationModule {
+export class __capcp__ConfirmationModule {
 }
 

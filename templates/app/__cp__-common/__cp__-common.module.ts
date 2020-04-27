@@ -7,10 +7,10 @@ import { MatDividerModule } from '@angular/material/divider';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { FormsModule } from '@angular/forms';
-import { __capitalizedCp__VersionIndicatorComponent } from "./__cp__-version-indicator.component";
-import { __capitalizedCp__LabelValueReadonlyComponent } from "./__cp__-label-value-readonly.component";
-import { __capitalizedCp__MetaService } from "./__cp__-meta.service";
-import { __capitalizedCp__TableHelperService } from "./__cp__-table-helper.service";
+import { __capcp__VersionIndicatorComponent } from "./__cp__-version-indicator.component";
+import { __capcp__LabelValueReadonlyComponent } from "./__cp__-label-value-readonly.component";
+import { __capcp__MetaService } from "./__cp__-meta.service";
+import { __capcp__TableHelperService } from "./__cp__-table-helper.service";
 
 @NgModule({
   imports: [
@@ -24,18 +24,18 @@ import { __capitalizedCp__TableHelperService } from "./__cp__-table-helper.servi
     MatCheckboxModule
   ],
   declarations: [
-    __capitalizedCp__VersionIndicatorComponent,
-    __capitalizedCp__LabelValueReadonlyComponent
+    __capcp__VersionIndicatorComponent,
+    __capcp__LabelValueReadonlyComponent
   ],
   exports: [
-    __capitalizedCp__VersionIndicatorComponent,
-    __capitalizedCp__LabelValueReadonlyComponent
+    __capcp__VersionIndicatorComponent,
+    __capcp__LabelValueReadonlyComponent
   ],
   providers: [
-    __capitalizedCp__MetaService,
-    __capitalizedCp__TableHelperService
+    __capcp__MetaService,
+    __capcp__TableHelperService
   ]
 })
-export class __capitalizedCp__CommonModule {
+export class __capcp__CommonModule {
 }
 

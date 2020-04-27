@@ -20,7 +20,7 @@
         <input
           #username
           (keydown.enter)="onLogin()"
-          app__capitalizedCp__Autofocus="{{focusOnUsername}}"
+          app__capcp__Autofocus="{{focusOnUsername}}"
           data-test-id="test-user"
           formControlName="username"
           matInput
@@ -34,7 +34,7 @@
         <input
           (keydown.enter)="onLogin()"
           [type]="hidePassword ? 'password' : 'text'"
-          app__capitalizedCp__Autofocus="{{focusOnPassword}}"
+          app__capcp__Autofocus="{{focusOnPassword}}"
           data-test-id="test-password"
           formControlName="password"
           matInput

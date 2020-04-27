@@ -24,7 +24,7 @@ import {
   `],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class __capitalizedCp__CountupComponent implements OnDestroy, AfterViewInit {
+export class __capcp__CountupComponent implements OnDestroy, AfterViewInit {
 
 
   @Input() startTimeInMillis: number;

@@ -5,5 +5,5 @@ import { Component } from '@angular/core';
   templateUrl: './__cp__-footer.component.html',
   styleUrls: ['./__cp__-footer.component.scss']
 })
-export class __capitalizedCp__FooterComponent {
+export class __capcp__FooterComponent {
 }

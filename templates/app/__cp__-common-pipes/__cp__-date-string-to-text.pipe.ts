@@ -1,7 +1,7 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({name: '__cp__DateStringToText'})
-export class __capitalizedCp__DateStringToTextPipe implements PipeTransform {
+export class __capcp__DateStringToTextPipe implements PipeTransform {
 
   static date2Text(_date: Date): string {
     const year = _date.getFullYear();
@@ -11,11 +11,11 @@ export class __capitalizedCp__DateStringToTextPipe implements PipeTransform {
     const minute = _date.getMinutes();
     const second = _date.getSeconds();
 
-    const d = __capitalizedCp__DateStringToTextPipe.get2Digits(day);
-    const m = __capitalizedCp__DateStringToTextPipe.get2Digits(month);
-    const h = __capitalizedCp__DateStringToTextPipe.get2Digits(hour);
-    const mi = __capitalizedCp__DateStringToTextPipe.get2Digits(minute);
-    const s = __capitalizedCp__DateStringToTextPipe.get2Digits(second);
+    const d = __capcp__DateStringToTextPipe.get2Digits(day);
+    const m = __capcp__DateStringToTextPipe.get2Digits(month);
+    const h = __capcp__DateStringToTextPipe.get2Digits(hour);
+    const mi = __capcp__DateStringToTextPipe.get2Digits(minute);
+    const s = __capcp__DateStringToTextPipe.get2Digits(second);
     return `${d}.${m}.${year} ${h}:${mi}:${s}`;
   }
 
@@ -33,7 +33,7 @@ export class __capitalizedCp__DateStringToTextPipe implements PipeTransform {
 
     try {
       const _date = new Date(s);
-      return __capitalizedCp__DateStringToTextPipe.date2Text(_date);
+      return __capcp__DateStringToTextPipe.date2Text(_date);
 
     } catch (e) {
       return s;

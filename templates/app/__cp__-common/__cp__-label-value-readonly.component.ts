@@ -26,7 +26,7 @@ import { Component, Input } from '@angular/core';
       }
   `]
 })
-export class __capitalizedCp__LabelValueReadonlyComponent {
+export class __capcp__LabelValueReadonlyComponent {
 
   @Input()
   label: string;
