@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { __capcp____pascalentity__AjaxService } from "./service/__cp__-__entity__-ajax.service";
-import { __capcp____pascalentity__Service } from "./service/__cp__-__entity__.service";
+import { __capcp____pascalentity__AjaxService } from "./service/__cp__-__kebabentity__-ajax.service";
+import { __capcp____pascalentity__Service } from "./service/__cp__-__kebabentity__.service";
 
 
 @NgModule({

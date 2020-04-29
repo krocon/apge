@@ -1,4 +1,4 @@
-import { __capcp____pascalentity__DataIf } from "./__cp__-__entity__.data.if";
+import { __capcp____pascalentity__DataIf } from "./__cp__-__kebabentity__.data.if";
 
 export class __capcp____pascalentity__Data implements __capcp____pascalentity__DataIf {
 

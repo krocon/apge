@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { __capcp____pascalentity__StoreService } from "./service/__cp__-__entity__-store.service";
+import { __capcp____pascalentity__StoreService } from "./service/__cp__-__kebabentity__-store.service";
 
 
 @NgModule({

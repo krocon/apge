@@ -1,7 +1,7 @@
 import { Injectable } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
 import { Observable } from "rxjs";
-import { __capcp____pascalentity__DataIf } from "../data/__cp__-__entity__.data.if";
+import { __capcp____pascalentity__DataIf } from "../data/__cp__-__kebabentity__.data.if";
 
 @Injectable({
   providedIn: 'root',

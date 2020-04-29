@@ -1,6 +1,6 @@
 import { Injectable } from "@angular/core";
 import { __capcp__TypedDataService } from "../../__cp__-common/__cp__-typed-data-service";
-import { __capcp____pascalentity__Data } from "../data/__cp__-__entity__.data";
+import { __capcp____pascalentity__Data } from "../data/__cp__-__kebabentity__.data";
 import { Observable } from "rxjs";
 
 @Injectable({
