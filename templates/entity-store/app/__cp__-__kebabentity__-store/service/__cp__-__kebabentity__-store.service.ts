@@ -10,7 +10,7 @@ export class __capcp____pascalentity__StoreService {
 
   private static readonly innerService =
     new __capcp__TypedDataService<__capcp____pascalentity__Data>(
-      '__entity__', // key in localstorage
+      '__kebabentity__', // key in localstorage
       new __capcp____pascalentity__Data() // default-value
     );
 

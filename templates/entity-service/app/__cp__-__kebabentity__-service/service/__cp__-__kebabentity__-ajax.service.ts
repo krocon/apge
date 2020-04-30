@@ -12,11 +12,11 @@ export class __capcp____pascalentity__AjaxService {
   // see app.component.ts: __capcp____pascalentity__AjaxService.forRoot(environment.__cp____pascalentity__Config);
 
   private static readonly config = {
-    getUrl: 'assets/mock-data/__entity__/get.json',
-    getAllUrl: 'assets/mock-data/__entity__/getall.json',
-    deleteUrl: 'assets/mock-data/__entity__/delete.json',
-    postUrl: 'assets/mock-data/__entity__/post.json',
-    putUrl: 'assets/mock-data/__entity__/put.json'
+    getUrl: 'assets/mock-data/__kebabentity__/get.json',
+    getAllUrl: 'assets/mock-data/__kebabentity__/getall.json',
+    deleteUrl: 'assets/mock-data/__kebabentity__/delete.json',
+    postUrl: 'assets/mock-data/__kebabentity__/post.json',
+    putUrl: 'assets/mock-data/__kebabentity__/put.json'
   };
 
   constructor(
