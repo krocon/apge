@@ -5,7 +5,7 @@ const sourceRoot = __dirname + '/../angular-demo-app';
 
 const copyBase = async () => {
   let src = path.join(sourceRoot, '/src/app/');
-  let target = path.join(__dirname, '/templates/app');
+  let target = path.join(__dirname, '/templates/new/app');
 
   fse.emptyDirSync(target);
   fse.copySync(

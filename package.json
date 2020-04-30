@@ -1,6 +1,6 @@
 {
   "name": "apge",
-  "version": "0.3.10",
+  "version": "0.3.12",
   "description": "Angular Project Generator",
   "scripts": {
     "test": "jest --findRelatedTests bin/ lib/",
