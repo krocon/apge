@@ -5,13 +5,6 @@
   <div *ngIf="bgImageVisible" class="__cp__-welcome-div"></div>
 </div>
 
-<div class="__cp__-text-hidden __cp__-font-monospace">
-  production: {{ environment.production }}<br>
-  envName: '{{ environment.env }}'<br>
-  version: '{{ environment.version }}'<br>
-  commit: '{{ environment.commitHash }}'<br>
-</div>
-
 <div
   class="__cp__-padding"
   [ngClass]="{'overlay-div': textAsOverlay && !(isSmall$ | async)}">
@@ -19,8 +12,10 @@
   <h1>AppXyz</h1>
 
   <br>
-  <p>Achten Sie darauf, dass die wesentliche Botschaft Ihrer Website auf Ihrer Startseite SOFORT zu sehen ist,
-    OHNE dass man dazu weiter runterscrollen muss</p>
+  <p class="__cp__-max-width-300-px">
+    Achten Sie darauf, dass die wesentliche Botschaft Ihrer Website auf Ihrer Startseite SOFORT zu sehen ist,
+    OHNE dass man dazu weiter runterscrollen muss
+  </p>
 
   <br>
 
@@ -32,7 +27,6 @@
 
 
 <div class="__cp__-padding"
-     [ngClass]="{'text-below-image-div': textAsOverlay && !(isSmall$ | async)}"
      fxLayout="row wrap"
      fxLayoutAlign="start stretch"
      fxLayoutGap="1rem" fxLayoutGap.lt-md="0">
@@ -59,3 +53,10 @@
   </div>
 </div>
 
+
+<div class="__cp__-text-hidden __cp__-font-monospace">
+  production: {{ environment.production }}<br>
+  envName: '{{ environment.env }}'<br>
+  version: '{{ environment.version }}'<br>
+  commit: '{{ environment.commitHash }}'<br>
+</div>

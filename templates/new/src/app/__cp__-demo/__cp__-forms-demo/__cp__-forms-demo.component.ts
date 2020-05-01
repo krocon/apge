@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { ThemePalette } from '@angular/material/core';
+import { ProgressSpinnerMode } from "@angular/material/progress-spinner";
+import { ProgressBarMode } from "@angular/material/progress-bar";
 
 @Component({
   selector: 'app-__cp__-forms-demo',
@@ -15,4 +17,21 @@ export class __capcp__FormsDemoComponent {
   disabled = false;
   color: ThemePalette = 'accent';
 
+  mode: ProgressSpinnerMode = 'indeterminate';
+  value = 50;
+  step = 0;
+  bufferValue = 75;
+  barmode: ProgressBarMode = 'determinate';
+
+  setStep(index: number) {
+    this.step = index;
+  }
+
+  nextStep() {
+    this.step++;
+  }
+
+  prevStep() {
+    this.step--;
+  }
 }

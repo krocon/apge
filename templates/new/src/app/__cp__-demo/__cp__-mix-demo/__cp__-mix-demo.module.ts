@@ -17,39 +17,26 @@ import { MatExpansionModule } from '@angular/material/expansion';
 import { MatIconModule } from '@angular/material/icon';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { MatButtonModule } from "@angular/material/button";
 
 @NgModule({
   declarations: [
     __capcp__MixDemoComponent
   ],
-  imports: [
-    CommonModule,
-    FormsModule,
-    FlexLayoutModule,
-    FlexModule,
-    ReactiveFormsModule,
-    RouterModule.forChild([
-      {
-        path: 'mix',
-        component: __capcp__MixDemoComponent,
-      }
-    ]),
-    MatRadioModule,
-    MatProgressSpinnerModule,
-    MatSliderModule,
-    MatFormFieldModule,
-    MatSelectModule,
-    MatCheckboxModule,
-    MatInputModule,
-    MatRadioModule,
-    MatCardModule,
-    MatSlideToggleModule,
-    MatExpansionModule,
-    MatIconModule,
-    MatDatepickerModule,
-    MatProgressBarModule,
-    MatProgressSpinnerModule
-  ],
+    imports: [
+        CommonModule,
+        FormsModule,
+        FlexLayoutModule,
+        FlexModule,
+        ReactiveFormsModule,
+        RouterModule.forChild([
+            {
+                path: 'mix',
+                component: __capcp__MixDemoComponent,
+            }
+        ]),
+        MatButtonModule
+    ],
   providers: [
     __capcp__MixDemoComponent
   ]

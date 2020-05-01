@@ -136,3 +136,9 @@ $widthPers: 20, 25, 33, 50;
   }
 }
 
+$maxwidth: 300, 600, 960, 1280, 1920;
+@each $w in $maxwidth {
+  .__cp__-max-width-#{$w}-px {
+    max-width: unquote(#{$w} + 'px');
+  }
+}

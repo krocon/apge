@@ -1,6 +1,6 @@
 {
   "name": "apge",
-  "version": "0.3.13",
+  "version": "0.3.14",
   "description": "Angular Project Generator",
   "scripts": {
     "test": "jest --findRelatedTests bin/ lib/",
@@ -53,7 +53,6 @@
     "window-size": "^1.1.1"
   },
   "devDependencies": {
-    "jest": "^25.4.0",
-    "jest-cli": "^25.4.0"
+    "jest": "^25.4.0"
   }
 }

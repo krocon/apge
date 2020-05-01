@@ -3,7 +3,7 @@ import {
   ChangeDetectorRef,
   Component,
   HostListener,
-  OnDestroy,
+  OnDestroy, OnInit,
   ViewChild
 } from '@angular/core';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
@@ -21,7 +21,7 @@ import { LoginResponseData } from "../__cp__-auth/data/login.response.data";
   styleUrls: ['./__cp__-nav.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class __capcp__NavComponent implements OnDestroy {
+export class __capcp__NavComponent implements OnInit, OnDestroy {
 
   private static readonly config = {
     routeTitles: {
@@ -99,6 +99,7 @@ export class __capcp__NavComponent implements OnDestroy {
           const routeTitles = __capcp__NavComponent.config.routeTitles;
           const keys = Object.keys(routeTitles);
           let url = evt.url.replace(/\//g, '');
+          // console.info('key', url);
           for (const key of keys) {
             if (url.indexOf(key) > -1) {
               this.title = routeTitles[key];

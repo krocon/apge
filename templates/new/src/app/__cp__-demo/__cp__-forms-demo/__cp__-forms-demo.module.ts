@@ -11,6 +11,10 @@ import { MatRadioModule } from '@angular/material/radio';
 import { MatCardModule } from '@angular/material/card';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { FlexLayoutModule, FlexModule } from '@angular/flex-layout';
+import { MatProgressSpinnerModule } from "@angular/material/progress-spinner";
+import { MatIconModule } from "@angular/material/icon";
+import { MatProgressBarModule } from "@angular/material/progress-bar";
+import { MatSliderModule } from "@angular/material/slider";
 
 @NgModule({
   declarations: [
@@ -34,7 +38,11 @@ import { FlexLayoutModule, FlexModule } from '@angular/flex-layout';
     MatInputModule,
     MatRadioModule,
     MatCardModule,
-    MatSlideToggleModule
+    MatSlideToggleModule,
+    MatProgressSpinnerModule,
+    MatIconModule,
+    MatProgressBarModule,
+    MatSliderModule
   ],
   providers: [
     __capcp__FormsDemoComponent

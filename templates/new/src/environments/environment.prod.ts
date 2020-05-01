@@ -1,4 +1,4 @@
-const backendUrl = '../service';
+const backendUrl = '../service'; // TODO set service url
 
 export const environment = {
   production: true,

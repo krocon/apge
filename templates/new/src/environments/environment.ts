@@ -13,9 +13,9 @@ export const environment = {
   showVersionIndicator: true,
   routerTracing: false,
 
-  loginRoute: '/anmelden',
-  logoutRoute: '/abmelden',
-  welcomeRoute: '/willkommen',
+  loginRoute: '/anmelden', // login
+  logoutRoute: '/abmelden', // logout
+  welcomeRoute: '/willkommen', // welcome or home
 
   authServiceConfig: {
     mock: false,

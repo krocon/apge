@@ -43,8 +43,8 @@ export class __capcp__AuthService {
   logout() {
     // tslint:disable:no-console
     console.info('Logging out...');
+    this.router.navigate(['/willkommen']);
     __capcp__AuthService.innerService.update(new LoginResponseData('', '', '','', ''));
-    this.router.navigate(['/']);
   }
 
   login(loginData: LoginRequestData): Observable<LoginResponseData> {
