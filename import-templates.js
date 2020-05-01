@@ -1,3 +1,4 @@
+const replace = require('replace-in-file');
 const fse = require('fs-extra');
 const path = require('path');
 
@@ -7,8 +8,15 @@ const sourceRoot = __dirname + '/../angular-demo-app';
 const copyBase = async () => {
   let src = path.join(sourceRoot, '/src');
   let target = path.join(__dirname, '/templates/new/src');
-  fse.emptyDirSync(target);
-  fse.copySync(src, target, { filter: s => s.indexOf('__kebabentity__') <= -1 });
+  await fse.emptyDirSync(target);
+  await fse.copySync(src, target, { filter: s => s.indexOf('__kebabentity__') <= -1 });
+
+  // fix  environments/environment.ts and environments/environment.prod.ts
+  await replace.sync({
+    files: target+ '/environments/*',
+    from: /__cp____pascalentity__Config:/g,
+    to: '// TODO delete:\n  TODO_delete:',
+  });
 };
 
 const copyEntityService = async () => {

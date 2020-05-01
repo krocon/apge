@@ -19,7 +19,8 @@ export const environment = {
     logoutMock: true,
   },
 
-  __cp____pascalentity__Config: {
+  // TODO delete:
+  TODO_delete: {
     getUrl: `${backendUrl}/__entity__`,
     getAllUrl: `${backendUrl}/__entity__`,
     deleteUrl: `${backendUrl}/__entity__`,

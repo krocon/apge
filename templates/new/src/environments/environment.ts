@@ -24,7 +24,8 @@ export const environment = {
     logoutMock: true,
   },
 
-  __cp____pascalentity__Config: {
+  // TODO delete:
+  TODO_delete: {
     getUrl: 'assets/mock-data/__kebabentity__/get.json',
     getAllUrl: 'assets/mock-data/__kebabentity__/getall.json',
     deleteUrl: 'assets/mock-data/__kebabentity__/delete.json',
