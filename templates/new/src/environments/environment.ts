@@ -22,7 +22,16 @@ export const environment = {
     loginUrl: 'assets/mock-data/auth/login.json',
     logoutUrl: 'assets/mock-data/auth/logout.json',
     logoutMock: true,
+  },
+
+  __cp____pascalentity__Config: {
+    getUrl: 'assets/mock-data/__kebabentity__/get.json',
+    getAllUrl: 'assets/mock-data/__kebabentity__/getall.json',
+    deleteUrl: 'assets/mock-data/__kebabentity__/delete.json',
+    postUrl: 'assets/mock-data/__kebabentity__/post.json',
+    putUrl: 'assets/mock-data/__kebabentity__/put.json'
   }
+
 };
 
 /*

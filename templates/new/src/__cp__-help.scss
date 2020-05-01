@@ -112,6 +112,7 @@ $sizes: 0px, 16px, 32px, 48px;
   display: none !important;
 }
 
+ //This fills the remaining space of the current row
 .__cp__-flex-fill-space {
   flex: 1 1 auto;
 }

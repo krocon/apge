@@ -3,22 +3,12 @@ const path = require('path');
 
 const sourceRoot = __dirname + '/../angular-demo-app';
 
-const copyBase = async () => {
-  let src = path.join(sourceRoot, '/src/app/');
-  let target = path.join(__dirname, '/templates/new/app');
 
+const copyBase = async () => {
+  let src = path.join(sourceRoot, '/src');
+  let target = path.join(__dirname, '/templates/new/src');
   fse.emptyDirSync(target);
-  fse.copySync(
-    src,
-    target,
-    {
-      filter:
-        (s, t) => {
-          if (s.indexOf('__kebabentity__') > -1) return false;
-          if (s.indexOf('__cp__') > -1) return true;
-          return true;
-        }
-    });
+  fse.copySync(src, target, { filter: s => s.indexOf('__kebabentity__') <= -1 });
 };
 
 const copyEntityService = async () => {
