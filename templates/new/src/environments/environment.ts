@@ -9,7 +9,7 @@ export const environment = {
   production: false,
   env: 'dev',
   version: pkg.version,
-  commitHash: '',
+  commitHash: '-',
   showVersionIndicator: true,
   routerTracing: false,
 

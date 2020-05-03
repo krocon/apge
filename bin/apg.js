@@ -2,7 +2,7 @@
 
 const {Command} = require('commander');
 const fs = require('fs-extra');
-const apge = require('../lib/cmd-generate-new.js');
+const apg = require('../lib/cmd-generate-new.js');
 const update = require('../lib/cmd-update.js');
 const pkg = require('../package.json');
 const chalk = require('chalk');
@@ -15,7 +15,7 @@ const program = new Command();
 printFiglet()
 
 program
-  .name('apge')
+  .name('apg')
   .usage('<cmd> [options]')
   .version(pkg.version, '-v, --version', 'Output the current version');
 
@@ -25,7 +25,7 @@ program
 
 program
   .command('update')
-  .description('Update of npm, angular cli and apge')
+  .description('Update of npm, angular cli and apg')
   .action(async () => {
     await update.update();
   });
@@ -35,9 +35,9 @@ program
   .description('Generate a new angular project')
   .option('-f, --force', 'No confirm dialog / no prompts.', false)
   .option('-a, --app <app>', 'The app name', 'demo')
-  .option('-l, --logo <logo>', 'A predefined logo [dummy, deutschebank, deutschebahn, lufthansa]', 'dummy')
+  .option('-l, --logo <logo>', 'A predefined logo [dummy, deutschebank, deutschebahn]', 'dummy')
   .option('-p, --prefix <prefix>', 'The app prefix', 'app')
-  .option('-cp, --componentprefix <componentprefix>', 'The component prefix', 'db')
+  .option('-cp, --componentprefix <componentprefix>', 'The component prefix', '') // no default
   .action(async (options) => {
       const opts = {
         force: options.force,
@@ -46,15 +46,16 @@ program
         componentprefix: options.componentprefix,
         logo: options.logo
       };
-      await apge.generateNewProject(opts);
+      await apg.generateNewProject(opts);
     }
   )
   .on('--help', () => {
     console.log('');
     console.log('Examples:');
     console.log('');
-    console.log('  $ apge new -a demo -p app -cp xy');
-    console.log('  $ apge new -a clicknride -p app -cp cr -f');
+    console.log('  $ apg new -a GuiExpert');
+    console.log('  $ apg new -a TradeFinder -p app -cp xy -l deutschebank');
+    console.log('  $ apg new -a click-n-ride -p app -cp cr -l deutschebahn -f ');
   });
 
 
@@ -66,9 +67,9 @@ program
   .action(async (p1, p2) => {
       let jsonObject;
       try {
-        jsonObject = fs.readJsonSync('apge.json');
+        jsonObject = fs.readJsonSync('apg.json');
       } catch (e) {
-        console.error(chalk.bold.red('The generate command requires to be run in an Angular project, but a project definition (apge.json) could not be found.'));
+        console.error(chalk.bold.red('The generate command requires to be run in an Angular project, but a project definition (apg.json) could not be found.'));
         console.error(e);
         process.exit(-1);
       }
@@ -80,7 +81,7 @@ program
 
         if (!name) {
           console.error(chalk.bold.red('Name is missing.'));
-          console.error(chalk.bold.red('Try:  apge generate --help'));
+          console.error(chalk.bold.red('Try:  apg generate --help'));
 
         } else if (schematic === 'storeservice') {
           await generateStoreService(name, jsonObject);
@@ -90,11 +91,11 @@ program
 
         } else {
           console.error(chalk.bold.red('The generate command requires a type [restservice, storeservice] and a name.'));
-          console.error(chalk.bold.red('Try:  apge generate --help'));
+          console.error(chalk.bold.red('Try:  apg generate --help'));
         }
 
       } else {
-        console.error(chalk.bold.red('Try:  apge generate --help'));
+        console.error(chalk.bold.red('Try:  apg generate --help'));
       }
     }
   )
@@ -102,8 +103,8 @@ program
     console.log('');
     console.log('Examples:');
     console.log('');
-    console.log('  $ apge generate restservice flight');
-    console.log('  $ apge generate storeservice configuration');
+    console.log('  $ apg generate restservice flight');
+    console.log('  $ apg generate storeservice configuration');
   });
 
 program.parse(process.argv);

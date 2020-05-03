@@ -11,7 +11,7 @@
   },
   "main": "lib/cmd-generate-new.js",
   "bin": {
-    "apge": "./bin/apge.js"
+    "apg": "bin/apg.js"
   },
   "preferGlobal": true,
   "repository": {
@@ -20,9 +20,12 @@
   },
   "keywords": [
     "angular",
+    "cli",
     "generator",
     "project",
-    "seed"
+    "seed",
+    "angular 9",
+    "angular 10"
   ],
   "files": [
     "bin/*.*",
@@ -46,6 +49,7 @@
     "chalk": "^4.0.0",
     "commander": "^5.0.0",
     "fs-extra": "^9.0.0",
+    "inquirer": "^7.1.0",
     "progress": "^2.0.3",
     "prompts": "^2.3.2",
     "replace-in-file": "^5.0.2",
@@ -53,6 +57,6 @@
     "window-size": "^1.1.1"
   },
   "devDependencies": {
-    "jest": "^25.4.0"
+    "jest": "^25.5.4"
   }
 }

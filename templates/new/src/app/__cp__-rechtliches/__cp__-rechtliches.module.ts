@@ -19,22 +19,22 @@ import { __capcp__NutzungsbedingungenComponent } from "./__cp__-nutzungsbedingun
       {
         path: '',
         component: __capcp__DatenschutzComponent,
-        data: {depth: 1}
-      },
-      {
-        path: 'datenschutz',
-        component: __capcp__DatenschutzComponent,
-        data: {depth: 1}
+        data: {animationLevel: 1}
       },
       {
         path: 'impressum',
         component: __capcp__ImprintComponent,
-        data: {depth: 1}
+        data: {animationLevel: 3}
       },
       {
         path: 'nutzungsbedingungen',
         component: __capcp__NutzungsbedingungenComponent,
-        data: {depth: 1}
+        data: {animationLevel: 4}
+      },
+      {
+        path: 'datenschutz',
+        component: __capcp__DatenschutzComponent,
+        data: {animationLevel: 5}
       }
     ]),
     HttpClientModule,

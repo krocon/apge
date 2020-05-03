@@ -11,9 +11,12 @@ import { environment } from "../../environments/environment";
       position: absolute;
       top: 0;
       left: 45%;
-      min-width: 100px;
+      min-width: 110px;
       height: 20px;
       z-index: 9999;
+    }
+    .children-hidden > span {
+      display: none;
     }
   `],
   template: `
@@ -22,6 +25,14 @@ import { environment } from "../../environments/environment";
         &nbsp;Version ({{environment.env}}):
         {{environment.version}}&nbsp;
         ({{environment.commitHash}})&nbsp;&nbsp;
+        <span class="children-hidden">
+          <span class="__cp__-display-inline-xs">xs</span>
+          <span class="__cp__-display-inline-sm">sm</span>
+          <span class="__cp__-display-inline-md">md</span>
+          <span class="__cp__-display-inline-lg">lg</span>
+          <span class="__cp__-display-inline-xl">xl</span>
+        </span>
+        &nbsp;
       </small>
     </div>
   `

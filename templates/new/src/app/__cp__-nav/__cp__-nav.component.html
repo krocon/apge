@@ -102,7 +102,10 @@
         type="button">
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
-      <span data-test-id="main-header-title-span">
+      <span
+        data-test-id="main-header-title-span"
+        class="main-header-title-span"
+        [ngClass]="{'fade-in': fadein}">
         {{title}}
       </span>
 

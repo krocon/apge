@@ -3,7 +3,13 @@ import { RouterModule, Routes } from '@angular/router';
 import { __capcp__LoginPageComponent } from "./__cp__-auth/__cp__-login/__cp__-login-page.component";
 import { __capcp__AuthGuardCanActivate } from "./__cp__-auth/__cp__-auth-guard-can-activate";
 import { environment } from "../environments/environment";
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 
+
+const data = {
+  breadcrumb: true,
+  animationLevel: 2
+};
 
 const routes: Routes = [
   {
@@ -20,7 +26,8 @@ const routes: Routes = [
     path: 'recht',
     loadChildren: () =>
       import('./__cp__-rechtliches/__cp__-rechtliches.module')
-        .then(m => m.__capcp__RechtlichesModule)
+        .then(m => m.__capcp__RechtlichesModule),
+    data
   },
   {
     path: 'anmelden',
@@ -32,6 +39,7 @@ const routes: Routes = [
       import('./__cp__-demo/__cp__-demo.module')
         .then(m => m.__capcp__DemoModule),
     canActivate: [__capcp__AuthGuardCanActivate],
+    data
   },
   {
     path: '',
@@ -48,8 +56,14 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes, {enableTracing: environment.routerTracing})],
-  exports: [RouterModule]
+  imports: [
+    RouterModule.forRoot(routes, {enableTracing: environment.routerTracing}),
+    BrowserAnimationsModule
+  ],
+  exports: [
+    RouterModule,
+    BrowserAnimationsModule
+  ]
 })
 export class AppRoutingModule {
 }

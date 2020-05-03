@@ -20,9 +20,8 @@ import { __capcp__AuthModule } from "./__cp__-auth/__cp__-auth.module";
     AppComponent,
   ],
   imports: [
-    BrowserModule,
-    AppRoutingModule,
     BrowserAnimationsModule,
+    BrowserModule,
     LayoutModule,
     MatToolbarModule,
     MatButtonModule,
@@ -30,6 +29,7 @@ import { __capcp__AuthModule } from "./__cp__-auth/__cp__-auth.module";
     MatIconModule,
     MatListModule,
 
+    AppRoutingModule,
     __capcp__NavModule,
     __capcp__AuthModule,
 

@@ -3,8 +3,8 @@ const backendUrl = '../service'; // TODO set service url
 export const environment = {
   production: true,
   env: 'prod',
-  version: '2020-04-27 14:23',
-  commitHash: '362affb',
+  version: '{BUILD_VERSION}',
+  commitHash: 'd73a26c',
   showVersionIndicator: false,
   routerTracing: false,
 
