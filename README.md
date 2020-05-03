@@ -1,6 +1,6 @@
 # **A**ngular **P**roject **G**enerator (APG) 
-
-## pre release version
+### Setup complete angular PWA with one command
+#### pre-release version
 
 Command line interface (CLI) for angular 9.
 It helps you with one command to generate an angular project folder.
